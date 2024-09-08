@@ -1,9 +1,10 @@
 "use client"
 
 import React, { useEffect, useRef } from 'react';
-import Events from './Events'
-import Hackathons from './Hackathons'
+import Events from './events'
+import Hackathons from './hackathons'
 import GalleryBanner from '../GalleryBanner/GalleryBanner';
+import  styles  from '@/styles/event.module.scss';
 
 const Index = () => {
   const landingPageRef = useRef<HTMLDivElement>(null);
@@ -30,11 +31,11 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="eventPage" ref={landingPageRef} style={{backgroundColor: '#1a1a1a'}}>
+    <div className={styles.eventPage} ref={landingPageRef} style={{backgroundColor: '#1a1a1a'}}>
         <Hackathons/>
-        <GalleryBanner/>
-        <Events/>
-      <div className="ball1" ref={ballRef1}></div>
+       {/*  <GalleryBanner/>  */}
+       {/* <Events/> */}
+      <div className={styles.ball1} ref={ballRef1}></div>
     </div>
   )
 }

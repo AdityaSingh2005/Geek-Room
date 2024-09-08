@@ -1,7 +1,8 @@
 import Footer from "@/Components/Footer/Footer";
 import Navbar from "@/Components/Navbar/Navbar";
-import "../Styles/globals.css";
+import "../styles/globals.css";
 import { Metadata } from "next";
+import ColorSchemeProvider from "./ColorSchemeProvider";
 
 export const metadata: Metadata = {
   title: "Geek Room",
@@ -19,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+        <ColorSchemeProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ColorSchemeProvider>
       </body>
     </html>
   );

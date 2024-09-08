@@ -1,7 +1,8 @@
 "use client"
 
 import React, { useEffect, useRef } from 'react';
-import styles from '@/Styles/AboutLanding.module.scss';
+import styles from '@/styles/aboutLanding.module.scss';
+import Image from 'next/image';
 
 interface CardProps {
   imageUrl: string;
@@ -10,7 +11,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ imageUrl, alt }) => (
   <div className={styles.card}>
-    <img src={imageUrl} alt={alt} />
+    <Image src={imageUrl} alt={alt} width={200} height={200} />
   </div>
 );
 
