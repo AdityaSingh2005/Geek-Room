@@ -32,7 +32,7 @@ const WinnerTeams: React.FC<WinnerTeamsProps> = ({ winners }) => {
              <div className={styles.winnerDetails}>
               <h3>{winner.teamName}</h3>
               <h6>{winner.project}</h6>
-              <p>Team Members: {winner.members.join(' | ')}</p>
+              <p><span style={{color: 'gold'}}>Team Members:</span> {winner.members.join(' | ')}</p>
               </div>
             </div>
           ))}
