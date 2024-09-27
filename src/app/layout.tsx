@@ -7,9 +7,17 @@ import ColorSchemeProvider from "./ColorSchemeProvider";
 export const metadata: Metadata = {
   title: "Geek Room",
   description: "Welcome to GeekRoom",
-  icons: {
-    icon: "/favicon.svg",
-  },
+  icons: [
+    {
+      rel: 'icon',
+      type: 'image/svg+xml',
+      url: '/GR_Logo.svg',
+    },
+    {
+      rel: 'apple-touch-icon',
+      url: '/GR_Logo.svg',
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -19,6 +27,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/GR_Logo.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/GR_Logo.svg" />
+      </head>
       <body>
         <ColorSchemeProvider>
           <Navbar />
