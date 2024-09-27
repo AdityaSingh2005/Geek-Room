@@ -50,7 +50,7 @@ const CounterCard: React.FC<CounterCardProps> = ({ finalNumber, label, iconSrc, 
   const displayNumber = Math.round(count);
   let formattedNumber: string | number = displayNumber;
 
-  if (isDefaultCounter && finalNumber === 15) {
+  if (isDefaultCounter && finalNumber === 25) {
     formattedNumber = `${displayNumber}K`;
   } else if (displayNumber >= 1000) {
     formattedNumber = `${(displayNumber / 1000).toFixed(1)}K`;
@@ -83,9 +83,9 @@ const CounterCardContainer: React.FC<CounterCardContainerProps> = ({ hackathonDe
   const duration = 2000;
 
   const defaultCounters = [
-    { finalNumber: 15, label: "Active Members", iconSrc: "/images/CounterCard1.svg" },
-    { finalNumber: 20, label: "Events Organized", iconSrc: "/images/CounterCard2.svg" },
-    { finalNumber: 250, label: "Team Members", iconSrc: "/images/CounterCard3.svg" }
+    { finalNumber: 25, label: "Active Members", iconSrc: "/images/counterCard1.svg" },
+    { finalNumber: 20, label: "Events Organized", iconSrc: "/images/counterCard2.svg" },
+    { finalNumber: 400, label: "Team Members", iconSrc: "/images/counterCard3.svg" }
   ];
 
   // Merge details provided in props with default counters
