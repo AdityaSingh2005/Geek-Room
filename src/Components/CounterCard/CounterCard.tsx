@@ -50,7 +50,7 @@ const CounterCard: React.FC<CounterProps> = ({ finalNumber, label, iconSrc }) =>
   return (
     <div className={styles.counterCard} ref={cardRef}>
       <div className={styles.svgIcon}>
-        <Image src={iconSrc} alt={label} width={90} height={90} priority />
+        <Image src={iconSrc} alt={label} width={90} height={90} priority/>
       </div>
       <div className={styles.counterNumber}>{formattedNumber}+</div>
       <div className={styles.counterLabel}>{label}</div>
@@ -72,9 +72,9 @@ interface ContainerProps {
 
 const CounterCardContainer: React.FC<ContainerProps> = ({ hackathonDetails = [] }) => {
   const defaultCounters: CounterProps[] = [
-    { finalNumber: 25000, label: "Active Members", iconSrc: "/images/counterCard1.svg" },
-    { finalNumber: 20, label: "Events Organized", iconSrc: "/images/counterCard2.svg" },
-    { finalNumber: 400, label: "Team Members", iconSrc: "/images/counterCard3.svg" }
+    { finalNumber: 25000, label: "Active Members", iconSrc: "/Images/CounterCard1.svg" },
+    { finalNumber: 20, label: "Events Organized", iconSrc: "/Images/CounterCard2.svg" },
+    { finalNumber: 400, label: "Team Members", iconSrc: "/Images/CounterCard3.svg" }
   ];
 
   const counters = hackathonDetails.length > 0 
