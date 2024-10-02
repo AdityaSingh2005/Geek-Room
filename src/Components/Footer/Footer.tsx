@@ -22,7 +22,7 @@ const Footer = () => {
             <Link href="/">Home</Link>
             <Link href="/about">About Us</Link>
             <Link href="/events">Events</Link>
-            <Link href="/team">Our Team</Link>
+            {/* <Link href="/team">Our Team</Link> */}
             <Link href="/contact">Contact</Link>
           </div>
           <div className={styles.Socials}>
