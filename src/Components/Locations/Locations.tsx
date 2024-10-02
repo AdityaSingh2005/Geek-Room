@@ -21,7 +21,7 @@ const sponsorList = [
   { name: 'Replit', logo: '/Sponsors/Replit.png' },
   { name: 'Devfolio', logo: '/Sponsors/Devfolio.png' },
   { name: 'Ox.Day', logo: '/Sponsors/OxDay.png' },
-  { name: 'Coding Ninja', logo: '/Sponsors/CodingNinja.png' },
+  { name: 'Coding Ninja', logo: '/Sponsors/codingNinja.png' },
   { name: 'ETH India', logo: '/Sponsors/ETHIndia.png' },
 
 ];
