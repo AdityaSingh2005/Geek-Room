@@ -11,11 +11,11 @@ export const metadata: Metadata = {
     {
       rel: 'icon',
       type: 'image/svg+xml',
-      url: '/GR_Logo.svg',
+      url: '/Favicon.svg',
     },
     {
       rel: 'apple-touch-icon',
-      url: '/GR_Logo.svg',
+      url: '/Favicon.svg',
     },
   ],
 };
@@ -28,8 +28,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/GR_Logo.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/GR_Logo.svg" />
+        <link rel="icon" href="/Favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/Favicon.svg" />
       </head>
       <body>
         <ColorSchemeProvider>
