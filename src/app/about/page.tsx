@@ -7,7 +7,7 @@ import React from 'react'
 const page = () => {
   return (
     <div style={{background: '#1a1a1a'}}>
-      <AboutLanding/>
+      {/*<AboutLanding/>*/}
       <About/>
       <CounterCardContainer/>
      {/* <Testimonials/> */}

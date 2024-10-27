@@ -1,27 +1,29 @@
+/*margin ki wajah se header and geek room ke beech mei ek black gap aa rha tha isiliye ye comment kr diya */
 .About {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  /*margin-top: 3rem: 
+  margin-bottom: 3rem;*/
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #1a1a1a;
-  color: white;
+  background-color: white{/*} #1a1a1a*/};
+  color: black{/*} white*/};
 
   .aboutContainer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center{/*flex-start*/};
     max-width: 1200px;
     width: 100%;
     height: 100%;
     padding: 10px;
 
-    h2 {
-      font-size: 4rem;
+    h1 {
+      font-size: 6rem;
+      text-align: center;
     }
 
     .aboutContent {
@@ -44,13 +46,13 @@
 
       .aboutContentText {
         display: flex;
-        flex-direction: column;
+        flex-direction: column;   
         gap: 20px;
 
         h2.aboutHeadingUnderline {
           position: relative;
           display: inline-block;
-
+        
           &::after {
             content: "";
             position: absolute;
