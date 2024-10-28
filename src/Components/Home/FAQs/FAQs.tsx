@@ -13,51 +13,39 @@ interface FAQItemProps {
 
 const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [displayedAnswer, setDisplayedAnswer] = useState('');
+  // const [displayedAnswer, setDisplayedAnswer] = useState('');
   const answerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (isOpen) {
-      let index = 0;
-      const intervalId = setInterval(() => {
-        setDisplayedAnswer(answer.slice(0, index));
-        index++;
-        if (index > answer.length) {
-          clearInterval(intervalId);
-        }
-      }, 20); 
-
-      return () => clearInterval(intervalId);
-    } else {
-      setDisplayedAnswer('');
-    }
-  }, [isOpen, answer]);
-
-  return (
-    <div className={styles.FAQItem}>
-      <button 
-        className={`${styles.FAQQuestion} ${isOpen ? styles.expanded : ''}`} 
-        onClick={() => setIsOpen(!isOpen)}
-        style={{color: isOpen ? '#00ACB4' : '#fff'}}
-      >
-        {question}
-        <Image 
-          src={isOpen ? Minus : Plus} 
-          alt={isOpen ? 'Collapse' : 'Expand'} 
-          width={20} 
-          height={20}
-        />
-      </button>
-      <div 
-        className={`${styles.FAQAnswer} ${isOpen ? styles.open : ''}`}
-        ref={answerRef}
-        style={{ height: isOpen ? answerRef.current?.scrollHeight + 'px' : '0' }}
-      >
-        {displayedAnswer}
+    const HandleAnswer = () => {
+      setIsOpen(!isOpen);
+    };
+    
+    return (
+      <div className={styles.FAQItem}>
+        <button 
+          className={`${styles.FAQQuestion} ${isOpen ? styles.expanded : ''}`} 
+          onClick={HandleAnswer}
+          style={{ color: isOpen ? '#00ACB4' : '#fff' }}
+        >
+          {question}
+          <Image 
+            src={isOpen ? Minus : Plus} 
+            alt={isOpen ? 'Collapse' : 'Expand'} 
+            width={20} 
+            height={20}
+          />
+        </button>
+        <div 
+          className={`${styles.FAQAnswer} ${isOpen ? styles.open : ''}`}
+          style={{ maxHeight: isOpen ? '200px' : '0' }} 
+        >
+          <p>{answer}</p>  
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  };
+    
+
 
 const FAQs = () => {
   const faqData = [
