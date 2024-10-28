@@ -8,8 +8,7 @@
     padding: 80px 20px 10px 20px;
     font-family: 'Satoshi',sans-serif;
     margin: 0px 0 20px 0;
-
-    
+    background-color: #efefef;
     .contactFormContent {
         width: 50%;
         display: flex;
@@ -28,12 +27,11 @@
 
         h2 {
             font-size: 5rem;
-            color: #58f7ff;
+            color: black;
             margin: 0;
         }
 
         p.aboutHeadingUnderline {
-             color: white;
              position: relative;
              display: inline-block;
     
@@ -65,7 +63,6 @@
                     width: 500px;
                     padding: 10px;
                     font-size: 1rem;
-                    color: #fff;
                     border: none;
                     border-bottom: 1px solid #ddd;
                     outline: none;
@@ -99,7 +96,6 @@
                 align-self: flex-start;
                 padding: 12px 30px;
                 font-size: 1rem;
-                color: #fff;
                 background-color: #F15A22;
                 border: none;
                 border-radius: 18px;
@@ -165,7 +161,7 @@
                         width: 100%;
                         padding: 10px;
                         font-size: 1rem;
-                        color: #fff;
+                        
                         border: none;
                         border-bottom: 1px solid #ddd;
                         outline: none;
@@ -199,7 +195,7 @@
                     align-self: flex-start;
                     padding: 12px 30px;
                     font-size: 1rem;
-                    color: #fff;
+                    
                     background-color: #F15A22;
                     border: none;
                     border-radius: 5px;
