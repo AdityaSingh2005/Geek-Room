@@ -1,6 +1,7 @@
 import React from 'react'
 import LandingPage from './LandingPage/LandingPage'
 import About from './About/About'
+import AboutLanding from './About/AboutLanding'
 import FAQs from './FAQs/FAQs'
 import ContactForm from '../ContactForm/ContactForm'
 import Locations from '../Locations/Locations'
@@ -13,6 +14,7 @@ const Index = () => {
         <LandingPage/>
         <CounterCard/>
         <About/>
+        <AboutLanding/>
         <OurWork/>
         <FAQs/>
         <Locations/>
