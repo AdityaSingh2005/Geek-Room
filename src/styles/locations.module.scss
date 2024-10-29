@@ -1,13 +1,13 @@
+
 .Locations {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 50px;
-    padding: 80px 20px;
-    max-width: 1200px;
+    padding: 80px 0;
+    max-width: 1440px;
     margin: 0 auto;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
     
     .LocationsHeading{
         display: flex;
@@ -19,29 +19,45 @@
     h1 {
         color: #58f7ff;
         margin: 0;
+        font-family: 'Bebas Neue', sans-serif;
+        font-weight: 400;
+        font-size: 206px;
+        line-height: 1;
     }
     
     p{
-      color: #fff;
-      margin: 0;
+        color: #fff;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 24px;
     }
-  }
+
+}
+div {
+    position: relative;
+    z-index: 10;
+}
 
     .collegeGrid {
+        margin: 100px auto;
         display: grid;
         grid-template-columns: repeat(4, 4fr);
-        gap: 30px;
+        gap: 20px;
         justify-items: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
     }
 
     .collegeItem {
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         gap: 20px;
-        width: 100%;
-        padding: 20px;
-        border-radius: 8px;
+        width: 320px;
+        height: 220px;
+        padding: 0 30px;
+        border-radius: 25px;
         background-color: rgb(13, 13, 14);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -63,6 +79,31 @@
             color: #fff;
             margin: 0;
         }
+    }
+
+    .ball1,
+    .ball2 {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(100px);
+        transition: transform 0.2s ease-out;
+        z-index: 2;
+    }
+
+    .ball1 {
+        width: 30vw;
+        height: 30vw;
+        background-color: #00acb415;
+        top: 25vw;
+        left: 4vw;
+    }
+
+    .ball2 {
+        width: 20vw;
+        height: 20vw;
+        background-color: #f1592215;
+        top: 0vw;
+        right: 10vw;
     }
 }
 

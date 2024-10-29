@@ -1,4 +1,5 @@
-import React from 'react';
+"use client"
+import React, { useRef } from 'react';
 import styles from '@/styles/locations.module.scss';
 import Image from 'next/image';
 
@@ -27,10 +28,14 @@ const sponsorList = [
 ];
 
 const Locations = () => {
+
+  const ballRef1 = useRef<HTMLDivElement>(null);
+  const ballRef2 = useRef<HTMLDivElement>(null);
+  
   return (
     <div className={styles.Locations}>
       <div className={styles.LocationsHeading}>
-      <h1>Geek Room Goes Global!!</h1>
+      <h1>Geek Room Chapters</h1>
       <p>Experience the Geek Room revolution at these prestigious institutions.</p>
       </div>
       <div className={styles.collegeGrid}>
@@ -48,7 +53,7 @@ const Locations = () => {
       </div>
 
        <div className={styles.LocationsHeading}>
-      <h1>Powering Innovation Together</h1>
+      <h1>Past Partners</h1>
       <p>We&apos;re proud to partner with industry leaders who share our vision for a tech-empowered future.</p>
       </div>
       <div className={styles.collegeGrid}>
@@ -67,6 +72,8 @@ const Locations = () => {
       <div>
         And Many More...
       </div>
+      <div className={styles.ball1} ref={ballRef1}></div>
+      <div className={styles.ball2} ref={ballRef2}></div>
     </div>
   )
 }
