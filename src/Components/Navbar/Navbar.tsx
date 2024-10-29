@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import GeekRoomLogo from "../../../public/Images/GeekRoomLogo.svg";
-
+// import DarkMode from "../DarkMode/DarkMode";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
@@ -57,6 +57,7 @@ const Navbar = () => {
               </a>
             </li>
           ))}
+          {/* <DarkMode /> */}
         </ul>
       </div>
     </div>
