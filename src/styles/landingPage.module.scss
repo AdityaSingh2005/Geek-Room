@@ -58,9 +58,9 @@
         }p{
             font-family: 'Satoshi',sans-serif;
             margin-top: 20px;
+            font-size: 24px;
         }
     }
-
     .ball1,
     .ball2 {
         position: absolute;
@@ -92,7 +92,7 @@
         justify-content: center;
         align-items: flex-start;
         height: 50vh;
-        background-color: #1a1a1a;
+        background-color: #efefef;
         overflow: hidden;
         position: relative;
 

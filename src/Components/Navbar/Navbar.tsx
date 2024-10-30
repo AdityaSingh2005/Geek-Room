@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import GeekRoomLogo from "../../../public/Images/GeekRoomLogo.svg";
+// import ThemeToggle from "../ThemeToggle/ThemeToggle";
 // import DarkMode from "../DarkMode/DarkMode";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,7 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
+    { href: "#about-us", label: "About" },
     { href: "/events", label: "Events" },
     { href: "#contact-us", label: "Contact" },
   ];
@@ -57,6 +58,9 @@ const Navbar = () => {
               </a>
             </li>
           ))}
+          {/* <div className="flex flex-1 justify-end">
+            <ThemeSwitch />
+          </div> */}
           {/* <DarkMode /> */}
         </ul>
       </div>
