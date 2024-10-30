@@ -7,7 +7,7 @@ import GeekRoomLogo from '../../../../public/Images/GeekRoomLogo.svg';
 
 const About = () => {
   return (
-    <div className={styles.About}>
+    <div className={styles.About} id="about-us">
       <div className={styles.aboutContainer}>
           <h1>ABOUT US{/*What is <span style={{color: '#00ACB4'}}>Geek Room?</span>*/}</h1>
       <div className={styles.aboutContent}>
