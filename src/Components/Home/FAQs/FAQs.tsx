@@ -25,7 +25,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
         <button 
           className={`${styles.FAQQuestion} ${isOpen ? styles.expanded : ''}`} 
           onClick={HandleAnswer}
-          style={{ color: isOpen ? '#00ACB4' : '#fff' }}
+          style={{ color: isOpen ? '#222222' : '#222222' }}
         >
           {question}
           <Image 
@@ -33,6 +33,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
             alt={isOpen ? 'Collapse' : 'Expand'} 
             width={20} 
             height={20}
+            style={{backgroundColor: "gainsboro", borderRadius: "50%", fill: "red",  }}
           />
         </button>
         <div 
