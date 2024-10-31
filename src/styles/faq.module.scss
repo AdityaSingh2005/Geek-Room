@@ -37,7 +37,7 @@
             color: #222222;
             h1{
                 margin: 0;
-                font-size: 36px;
+                font-size: 48px;
             }
 
             p{
@@ -46,13 +46,13 @@
         }
 
     }
-    .FAQs_Box:hover{
-        box-shadow:
-        0 4px 6px rgba(0, 0, 0, 0.1),
-        0 1px 3px rgba(0, 0, 0, 0.08),
-        0 0 0 1px rgba(255, 255, 255, 0.1) inset,
-        0 0 20px #075d6091;
-    }
+    // .FAQs_Box:hover{
+    //     // box-shadow:
+    //     // 0 4px 6px rgba(0, 0, 0, 0.1),
+    //     // 0 1px 3px rgba(0, 0, 0, 0.08),
+    //     // 0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+    //     // 0 0 20px #222222;
+    // }
         .FAQ_Container {
             display: flex;
             flex-direction: column;
@@ -94,7 +94,7 @@
             transition: background-color 0.3s ease;
     
             &:hover:not(.expanded) {
-                // background-color: #f3f3f3c4;
+                // background-color: #f3f3f3;
                 background-color: #fff;
                 color: #222222;
             }
@@ -115,12 +115,12 @@
         line-height: 30px;
         color: #222222;
         background-color: #f3f3f3;
+        font-family: "Poppins", sans-serif;
 
         &.open {
             margin-top: 10px;
-            max-height: 210px;
+            max-height: 350px;
             background-color: #f3f3f3;
-            // background-color: #f3f3f3;
             color: black;
             padding: 1rem;
         }
@@ -160,7 +160,7 @@
             gap: 20px;
         }
         .FAQQuestion {
-            background-color:rgb(0, 0, 0);
+            background-color:#f3f3f3;
             border-radius: 8px;
             width: 80%;
             padding: 15px 20px;
@@ -175,22 +175,32 @@
             transition: background-color 0.3s ease;
     
             &:hover:not(.expanded) {
-                background-color: #00ACB4;
+                background-color: #f3f3f3;
+                color: #222222;
             }
             
             &.expanded {
-                background-color: black;
+                background-color: #fff;
+                color: #222222;
             }
+            
     }
     .FAQAnswer {
         overflow: hidden;
-        transition: height 0.3s ease-out;
-        height: 0;
+        transition: max-height 0.6s ease-out;
+        max-height: 0;
         padding: 0 20px;
         line-height: 30px;
+        font-size: 14px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
     
         &.open {
             margin-top: 10px;
+            max-height: 300px;
+            background-color: #f3f3f3;
+            color: black;
+            padding: 1rem;
         }
     }
 }
