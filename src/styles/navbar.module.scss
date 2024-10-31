@@ -4,7 +4,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
-  background-color: #1a1a1a; 
+  background-color: #efefef;
+  color: black; 
   z-index: 999;
    
 
@@ -23,7 +24,7 @@
     .Line {
       width: 25px;
       height: 3px;
-      background-color: #fff;
+      background-color: black;
     }
   }
 
@@ -42,11 +43,11 @@
         z-index: 1; 
         
         a {
-          color: #fff;
+          color: black;
           text-decoration: none;
 
           &:hover {
-            color: #ddd; 
+            color: red; 
           }
         }
         span {

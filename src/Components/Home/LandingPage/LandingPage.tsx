@@ -2,6 +2,8 @@
 
 import React, { useEffect, useRef } from 'react';
 import styles from '@/styles/landingPage.module.scss';
+import Image from "next/image";
+import GeekRoomLogo from "../../../../public/Images/GeekRoomLogo.svg";
 
 const LandingPage = () => {
   const landingPageRef = useRef<HTMLDivElement>(null);
@@ -30,9 +32,12 @@ const LandingPage = () => {
   return (
     <div className={styles.landingPage} ref={landingPageRef}>
       <div className={styles.content}>
-        <div className={styles.word}><h1>learn<span>.</span></h1></div>
-        <div className={styles.word}><h1>connect<span>.</span></h1></div>
-        <div className={styles.word}><h1>grow<span>.</span></h1></div>
+        <div className={styles.img}>
+          <Image src={GeekRoomLogo} alt="GeekRoomLogo" />
+        </div>
+        <div className={styles.word}><h1>Geek Room</h1></div>
+        <div className={styles.word}><p>A community dedicated to helping each other get better at coding together.</p></div>
+
       </div>
       <div className={styles.ball1} ref={ballRef1}></div>
       <div className={styles.ball2} ref={ballRef2}></div>
