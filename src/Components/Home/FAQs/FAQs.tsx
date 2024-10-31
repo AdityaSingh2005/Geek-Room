@@ -16,6 +16,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
   // const [displayedAnswer, setDisplayedAnswer] = useState('');
   const answerRef = useRef<HTMLDivElement>(null);
 
+
     const HandleAnswer = () => {
       setIsOpen(!isOpen);
     };
@@ -25,7 +26,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
         <button 
           className={`${styles.FAQQuestion} ${isOpen ? styles.expanded : ''}`} 
           onClick={HandleAnswer}
-          style={{ color: isOpen ? '#222222' : '#222222' }}
+          style={{ color: isOpen ? '#222222' : '#222222', backgroundColor: isOpen ? '#fff' : '#f3f3f3' }}
         >
           {question}
           <Image 
@@ -33,12 +34,12 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
             alt={isOpen ? 'Collapse' : 'Expand'} 
             width={20} 
             height={20}
-            style={{backgroundColor: "gainsboro", borderRadius: "50%", fill: "red",  }}
+            style={{backgroundColor: "gainsboro", borderRadius: "50%",   }}
           />
         </button>
         <div 
           className={`${styles.FAQAnswer} ${isOpen ? styles.open : ''}`}
-          style={{ maxHeight: isOpen ? '200px' : '0' }} 
+          style={{ maxHeight: isOpen ? '350px' : '0' }} 
         >
           <p>{answer}</p>  
         </div>
@@ -64,7 +65,7 @@ const FAQs = () => {
     },
     {
       question: "What makes Geek Room unique?",
-      answer: "Our vast connections , a widespread community of over 7500+ coders nationwide , conduction of successful hackathons and events , boasting multi hackathon winning teams comprised purely of Geek Room members , a philosophy of a community of the coders , for the coders and by the coders and a transparent community where anyone can start coding easily , Geek Room is a unique trendsetter that is built for the upliftment of the Indian coding community."
+      answer: "Our vast connections, a widespread community of over 7500+ coders nationwide , conduction of successful hackathons and events, boasting multi hackathon winning teams comprised purely of Geek Room members, a philosophy of community of the coders, for the coders and by the coders and a transparent community where anyone can start coding easily, Geek Room is a unique trendsetter that is built for the upliftment of the Indian coding community."
     }
   ];
 
