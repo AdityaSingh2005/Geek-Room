@@ -6,12 +6,12 @@ $text-color: #ffffff;
 $light-background: #2c2c2c;
 $gradient-light: linear-gradient(144deg, #F15A22, rgba(91, 66, 243, 0.15) 50%, #00ACB4); 
 $shadow-color: rgba($primary-color, 0.7);
-
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap');
 .ourWork {
   padding: 0rem 3rem 5rem 3rem;
-  background-color: #1a1a1a;
-  color: $text-color;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: white;
+  color: black;
+  font-family: "Satoshi", sans-serif;
   margin: 20px 0;
 }
 
@@ -21,7 +21,7 @@ $shadow-color: rgba($primary-color, 0.7);
   font-size: 3.3rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: white;
+  color: black;
 }
 
 .gridContainer {
@@ -33,7 +33,8 @@ $shadow-color: rgba($primary-color, 0.7);
 }
 
 .workBox {
-  background-color: $box-background;
+  background-color: white;
+  border: 1px solid black;
   border-radius: 15px;
   padding: 2rem;
   display: flex;
@@ -41,11 +42,11 @@ $shadow-color: rgba($primary-color, 0.7);
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: $text-color;
+  color: black;
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: $box-background;
+  background: white;
 
   &::before {
     content: "";
@@ -74,7 +75,7 @@ $shadow-color: rgba($primary-color, 0.7);
 
 .title {
   font-size: 1.8rem;
-  color: $secondary-color;
+  color:black;
   margin: 0;
 }
 

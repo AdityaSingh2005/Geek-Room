@@ -1,6 +1,6 @@
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap');
 .container {
-    background-color: #efefef;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +76,7 @@
 // responsive
 @media (max-width:600px) {
     .container {
-        background-color: #1a1a1a;
+        background-color: white;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -128,7 +128,7 @@
 
         .counterLabel {
             font-size: 32px;
-            color: #fff;
+            color: black;
         }
 
         &:nth-child(1) {

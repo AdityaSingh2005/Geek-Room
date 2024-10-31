@@ -10,7 +10,7 @@ import CounterCard from '../CounterCard/CounterCard'
 
 const Index = () => {
   return (
-    <div style={{backgroundColor: '#1a1a1a'}}>
+    <div style={{backgroundColor: 'white'}}>
         <LandingPage/>
         <CounterCard/>
         <About/>

@@ -1,4 +1,5 @@
 /*margin ki wajah se header and geek room ke beech mei ek black gap aa rha tha isiliye ye comment kr diya */
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap');
 .About {
   display: flex;
   flex-direction: column;
@@ -7,7 +8,7 @@
   padding: 20px;
   /*margin-top: 3rem: 
   margin-bottom: 3rem;*/
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Satoshi", sans-serif;
   background-color: white{/*} #1a1a1a*/};
   color: black{/*} white*/};
 
@@ -15,7 +16,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center{/*flex-start*/};
+    align-items: center/*flex-start*/;
     max-width: 1200px;
     width: 100%;
     height: 100%;

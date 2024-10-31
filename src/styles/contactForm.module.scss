@@ -8,7 +8,7 @@
     padding: 80px 20px 10px 20px;
     font-family: 'Satoshi',sans-serif;
     margin: 0px 0 20px 0;
-    background-color: #efefef;
+    background-color: white;
     .contactFormContent {
         width: 50%;
         display: flex;
@@ -122,10 +122,10 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 638px) {
     .contactFormContainer {
         flex-direction: column;
-        padding: 40px 10px;
+        padding: 40px 0px;
 
         .contactFormContent,
         .contactFormImage {
@@ -138,7 +138,11 @@
             flex-direction: column-reverse;
             align-items: center;
         }
-    
+        .contactFormHeading{
+            h2{
+                font-size: 3rem;
+            }
+        }
 
         .contactFormImage {
             margin-top: 40px;
