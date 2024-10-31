@@ -72,24 +72,23 @@
     }
 }
 
-// responsive
-@media (max-width:600px) {
+@media (max-width: 600px) {
     .container {
-        background-color: #1a1a1a;
+        background-color: white; 
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center; 
         align-items: center;
         gap: 20px;
-        padding: 10px 10px 10px 10px;
+        padding: 10px; 
+        margin-top: 0; 
     }
 
     .counterCard {
-        padding: 30px;
-        text-align: center;
+        padding: 20px; 
         width: 90%;
-        height: 90%;
+        height: auto; 
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -112,22 +111,22 @@
             opacity: 20%;
 
             img {
-                width: 300px;
-                height: 230px;
+                width: 300px; 
+                height: 230px; 
                 object-fit: contain;
             }
         }
 
         .counterNumber {
-            font-size: 100px;
+            font-size: 80px; 
             font-weight: bold;
             color: #333;
             margin-bottom: 10px;
         }
 
         .counterLabel {
-            font-size: 32px;
-            color: #fff;
+            font-size: 28px; 
+            color: black; 
         }
 
         &:nth-child(1) {
@@ -148,5 +147,4 @@
             }
         }
     }
-
 }

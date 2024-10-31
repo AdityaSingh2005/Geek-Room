@@ -1,4 +1,5 @@
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap');
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -18,19 +19,20 @@
     text-align: center;
     height: 95vh;
     background-color: #efefef;
-
     overflow: hidden;
     position: relative;
 
     .content {
         position: relative;
-        top:100px;
+        top: 100px;
         z-index: 10;
     }
-    .img img{
+
+    .img img {
         height: 170px;
         width: 180px;
     }
+
     .word {
         opacity: 0;
         animation: fadeInUp 0.8s ease-out forwards;
@@ -48,15 +50,19 @@
         }
 
         h1 {
-            font-family: 'Satoshi',sans-serif;
+            font-family: 'Satoshi', sans-serif;
             font-size: 12vw;
             font-style: normal;
             font-weight: 700;
             line-height: 80%;
             letter-spacing: -0.4vw;
             margin: 0;
-        }p{
-            font-family: 'Satoshi',sans-serif;
+            color: #000;
+        }
+
+        p {
+            font-family: 'Satoshi', sans-serif;
+            color: #000;
             margin-top: 20px;
         }
     }
@@ -86,24 +92,46 @@
     }
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px) {
     .landingPage {
         display: flex;
         justify-content: center;
-        align-items: flex-start;
-        height: 50vh;
-        background-color: #1a1a1a;
+        align-items: center; 
+        height: 60vh; 
+        background-color: #fff; 
         overflow: hidden;
         position: relative;
+        margin: 0; 
+        transition: background-color 0.3s ease; 
 
-        .word h1{
+        &:active {
+            background-color: rgba(0, 172, 180, 0.3); 
+        }
+
+        .content {
+            top: 0; 
+            z-index: 10;
+            text-align: center; 
+            padding: 20px; 
+            margin: 0; 
+        }
+
+        .word h1 {
             font-family: 'Satoshi', sans-serif;
-            font-size: 15vw;
+            font-size: 15vw; 
             font-style: normal;
             font-weight: 700;
             line-height: 80%;
             letter-spacing: -0.4vw;
-            margin: 0;
+            margin: 0; 
+            color: #000; 
+        }
+
+        p {
+            font-family: 'Satoshi', sans-serif;
+            color: #000; 
+            margin-top: 10px; 
+            font-size: 5vw; 
         }
     }
 }

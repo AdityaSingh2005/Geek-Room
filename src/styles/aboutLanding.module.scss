@@ -52,7 +52,6 @@
     }
 }
 
-/*added media for responsiveness*/
 @media (max-width: 600px) {
     .aboutPageWrapper {
         height: auto;
@@ -68,27 +67,26 @@
     .infiniteCardsRow {
         display: flex;
         flex-direction: row;
-        overflow-x: auto;  
-        scroll-behavior: smooth;  
+        overflow-x: auto; 
         padding: 0 10px;
+        margin-bottom: 20px; 
+        
     }
 
     .card {
         width: 200px; 
         height: auto;
         margin-right: 15px;
-        box-shadow: 0 4px 8px rgba(150, 150, 150, 0.4);  
-        transition: transform 0.3s ease;
+        box-shadow: 0 4px 8px rgba(150, 150, 150, 0.4); 
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
 
-        &:hover {
-            transform: scale(1.1); 
-            box-shadow:  0 4px 8px rgba(64, 224, 208, 0.7); 
-        }
-
-        img { 
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.3s ease; 
         }
     }
 }
+
+
