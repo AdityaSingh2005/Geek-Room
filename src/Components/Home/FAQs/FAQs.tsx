@@ -33,12 +33,12 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
             alt={isOpen ? 'Collapse' : 'Expand'} 
             width={20} 
             height={20}
-            style={{backgroundColor: "gainsboro", borderRadius: "50%", fill: "red",  }}
+            style={{backgroundColor: "gainsboro", borderRadius: "50%"  }}
           />
         </button>
         <div 
           className={`${styles.FAQAnswer} ${isOpen ? styles.open : ''}`}
-          style={{ maxHeight: isOpen ? '200px' : '0' }} 
+          style={{ maxHeight: isOpen ? '450px' : '0' }} 
         >
           <p>{answer}</p>  
         </div>
