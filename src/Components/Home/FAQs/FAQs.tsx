@@ -81,6 +81,8 @@ const FAQs = () => {
           ))}
         </div>
       </div>
+      <div className={styles.ball1}></div>
+      <div className={styles.ball2}></div>
     </div>
   )
 }

@@ -1,25 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+
+
 .FAQ{
+    background-color: #f3f3f3;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 20px 0;
-    background-color: #f3f3f3;
 
+    .ball1,
+    .ball2 {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(100px);
+        transition: transform 0.2s ease-out;
+    }
+
+    .ball1 {
+        width: 30vw;
+        height: 30vw;
+        background-color: rgba(0, 172, 180, 0.3);
+        top: 20vw;
+        left: 6vw;
+    }
+
+    .ball2 {
+        width: 20vw;
+        height: 20vw;
+        background-color: #f1592280;
+        top: 2vw;
+        right: 15vw;
+    }
     .FAQs_Box{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        // background-color: rgb(13, 13, 14);
         background-color: #fff;
+        // background-color: #222222;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
         border-radius: 8px;
         padding: 20px;
         max-width: 1200px;
         width: 100%;
         gap: 20px;
         transition: box-shadow 0.3s ease;
+
+        
 
         .FAQ_Heading{
             display: flex;
@@ -31,7 +62,7 @@
 
             h1{
                 margin: 0;
-                font-size: 60px;
+                font-size: 36px;
             }
 
             p{
@@ -63,28 +94,40 @@
     
         .FAQQuestion {
             // background-color:rgb(0, 0, 0);
+
             background-color: #f3f3f3;
             border-radius: 8px;
             width: 100%;
             padding: 15px 20px;
             border: none;
+            font-style: normal;
+            // font-weight: bold;
             text-align: left;
-            font-size: 1.1em;
-            font-weight: bold;
+            font-size: 18px;
+            font-weight: 600;
+
+            font-family: Poppins;
+
+
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background-color: #f3f3f3;
+           
             transition: background-color 0.3s ease;
     
             &:hover:not(.expanded) {
-                // background-color: #00ACB4;
-                background-color: #f3f3f3;
+                // background-color: #f3f3f3c4;
+                background-color: #fff;
+                color: #222222;
             }
             
             &.expanded {
+                // background-color: #f3f3f3c4;
                 // background-color: black;
                 background-color: #fff;
+                color: #222222;
             }
     }
     
@@ -94,15 +137,19 @@
         max-height: 0;
         padding: 0 20px;
         line-height: 30px;
-        background-color: #f3f3f3;
         color: #222222;
-    
+        background-color: #f3f3f3;
+
         &.open {
             margin-top: 10px;
-            max-height: 300px;
+            max-height: 210px;
+            background-color: #f3f3f3;
+            // background-color: #f3f3f3;
+            color: black;
             padding: 1rem;
         }
     }
+ 
 }
 /* <----Responsive------>*/
 @media (max-width:600px) {

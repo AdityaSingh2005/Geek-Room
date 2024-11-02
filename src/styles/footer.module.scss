@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 .footer {
     position: relative;
-    background-color: black;
-    color: #ffffff;
+    background-color: white;
+    color: black;
     padding: 40px 0 20px;
     overflow: hidden;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Satoshi", sans-serif;
 }
 
 .footerContent {
@@ -50,7 +51,7 @@
     }
 
     a {
-        color: #ffffff;
+        color: black;
         text-decoration: none;
         font-size: 14px;
         transition: color 0.3s ease, transform 0.2s ease;
