@@ -7,8 +7,6 @@ import ContactForm from '../ContactForm/ContactForm'
 import Locations from '../Locations/Locations'
 import OurWork from '../OurWork/OurWork'
 import CounterCard from '../CounterCard/CounterCard'
-import Sponsors from '../Carousel/Carousel'
-
 
 const Index = () => {
   return (
@@ -20,7 +18,6 @@ const Index = () => {
         <OurWork/>
         <FAQs/>
         <Locations/>
-       <Sponsors/>
         <ContactForm/>
     </div>
   )
