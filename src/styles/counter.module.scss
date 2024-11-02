@@ -1,5 +1,6 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap');
 .container {
-    background-color: #1a1a1a;
+    background-color: #efefef;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +22,7 @@
     border-radius: 36px;
     border: 1px solid #373737;
     backdrop-filter: blur(8px);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Satoshi", sans-serif;
 
     .svgIcon {
         z-index: -1;
@@ -50,7 +51,7 @@
 
     .counterLabel {
         font-size: 32px;
-        color: #fff;
+        color: black;
     }
 
     &:nth-child(1) {
@@ -72,24 +73,23 @@
     }
 }
 
-// responsive
-@media (max-width:600px) {
+@media (max-width: 600px) {
     .container {
-        background-color: #1a1a1a;
+        background-color: white; 
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center; 
         align-items: center;
         gap: 20px;
-        padding: 10px 10px 10px 10px;
+        padding: 10px; 
+        margin-top: 0; 
     }
 
     .counterCard {
-        padding: 30px;
-        text-align: center;
+        padding: 20px; 
         width: 90%;
-        height: 90%;
+        height: auto; 
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -112,22 +112,22 @@
             opacity: 20%;
 
             img {
-                width: 300px;
-                height: 230px;
+                width: 300px; 
+                height: 230px; 
                 object-fit: contain;
             }
         }
 
         .counterNumber {
-            font-size: 100px;
+            font-size: 80px; 
             font-weight: bold;
             color: #333;
             margin-bottom: 10px;
         }
 
         .counterLabel {
-            font-size: 32px;
-            color: #fff;
+            font-size: 28px; 
+            color: black; 
         }
 
         &:nth-child(1) {
@@ -148,5 +148,4 @@
             }
         }
     }
-
 }

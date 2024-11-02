@@ -28,9 +28,9 @@ const Footer = () => {
           <div className={styles.Socials}>
             <h3>Socials</h3>
             <div className={styles.SocialsLinks}>
-            <Link href="https://www.instagram.com/_geek.room/"><Image src={Instagram} alt='Instagram' /></Link>
-            <Link href="https://www.linkedin.com/company/geekr00m/mycompany/"><Image src={Linkedin} alt='Linkedin' /></Link>
-            <Link href="https://x.com/geek__room_"><Image src={Twiiter} alt='Twitter' /></Link>
+            <Link href="https://www.instagram.com/_geek.room/"><Image src={Instagram} alt='Instagram' style={{backgroundColor:'black'}} /></Link>
+            <Link href="https://www.linkedin.com/company/geekr00m/mycompany/"><Image src={Linkedin} alt='Linkedin' style={{backgroundColor:'black'}} /></Link>
+            <Link href="https://x.com/geek__room_"><Image src={Twiiter} alt='Twitter' style={{backgroundColor:'black'}}/></Link>
             </div>
           </div>
         </div>

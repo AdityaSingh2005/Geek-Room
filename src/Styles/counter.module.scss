@@ -1,5 +1,6 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap');
 .container {
-    background-color: #1a1a1a;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +22,7 @@
     border-radius: 36px;
     border: 1px solid #373737;
     backdrop-filter: blur(8px);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Satoshi", sans-serif;
 
     .svgIcon {
         z-index: -1;
@@ -50,7 +51,7 @@
 
     .counterLabel {
         font-size: 32px;
-        color: #fff;
+        color: black;
     }
 
     &:nth-child(1) {
@@ -75,7 +76,7 @@
 // responsive
 @media (max-width:600px) {
     .container {
-        background-color: #1a1a1a;
+        background-color: white;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -127,7 +128,7 @@
 
         .counterLabel {
             font-size: 32px;
-            color: #fff;
+            color: black;
         }
 
         &:nth-child(1) {
