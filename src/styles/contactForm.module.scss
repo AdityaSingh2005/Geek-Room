@@ -32,20 +32,21 @@
         }
 
         p.aboutHeadingUnderline {
+            color: black;
              position: relative;
              display: inline-block;
     
-            &::after {
-              content: '';
-              position: absolute;
-              right: 0px;
-              bottom: -15px;
-              width: 315px;
-              height: 5px;
-              background-color: #F15A22;
-              border-radius: 100% 100% 100% 0;
-              transform: skew(12deg);
-            }
+            // &::after {
+            //   content: '';
+            //   position: absolute;
+            //   right: 0px;
+            //   bottom: -15px;
+            //   width: 315px;
+            //   height: 5px;
+            //   background-color: #F15A22;
+            //   border-radius: 100% 100% 100% 0;
+            //   transform: skew(12deg);
+            // }
         }
 }
 
@@ -70,14 +71,14 @@
                     transition: border-color 0.3s;
 
                     &:focus {
-                        border-color: #58f7ff;
+                        border-color: #F15A22;
                     }
 
                     &:focus+label,
                     &:valid+label {
                         top: -20px;
                         font-size: 0.8rem;
-                        color: #58f7ff;
+                        color: #F15A22;
                     }
                 }
 
@@ -173,14 +174,14 @@
                         transition: border-color 0.3s;
     
                         &:focus {
-                            border-color: #58f7ff;
+                            border-color: #F15A22;
                         }
     
                         &:focus+label,
                         &:valid+label {
                             top: -20px;
                             font-size: 0.8rem;
-                            color: #58f7ff;
+                            color: #F15A22;
                         }
                     }
     
