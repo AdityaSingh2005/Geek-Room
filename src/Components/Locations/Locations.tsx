@@ -7,7 +7,7 @@ const collegeList = [
   { name: 'Maharaja Surajmal Institute of Technology', logo: '/Locations/msit.png' },
   { name: 'Jagan Institute of Management Studies', logo: '/Locations/JIMS.png' },
   { name: 'Institute of Information Technology & Management', logo: '/Locations/IITMJanakpuri.png' },
-  { name: 'Bennett University', logo: '/Locations/Bennet.png' },
+  // { name: 'Bennett University', logo: '/Locations/Bennet.png' },
 
 ];
 

@@ -7,7 +7,7 @@ import styles from '@/styles/event.module.scss';
 const Hackathons = () => {
   return (
     <div className={styles.event_page}>
-      <div className={`${styles.event_heading} ${styles.event}`}>Hackathons</div>
+      <div className={`${styles.event_heading} ${styles.event}`}>EVENTS</div>
       <div className={styles.event_subHeading}>
         <p>&quot;Embrace Innovation, Collaborate and Celebrate&quot;</p>
       </div>

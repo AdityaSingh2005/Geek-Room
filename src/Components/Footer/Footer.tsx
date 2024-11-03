@@ -35,9 +35,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className={styles.bottomBar}>
+      {/* <div className={styles.bottomBar}>
         <p>&copy; 2024 Geek Room. All rights reserved.</p>
-      </div>
+      </div> */}
     </footer>
   );
 };
