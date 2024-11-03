@@ -1,4 +1,5 @@
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap');
+
 .container {
     background-color: #efefef;
     display: flex;
@@ -13,138 +14,156 @@
     padding: 30px;
     text-align: center;
     width: 379px;
-    height: 507px;
+    height: 250px; // Set the height as specified
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: center;
     position: relative;
     border-radius: 36px;
     border: 1px solid #373737;
     backdrop-filter: blur(8px);
     font-family: "Satoshi", sans-serif;
 
-    .svgIcon {
-        z-index: -1;
-        position: absolute;
-        top: 10px;
-        left: 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        opacity: 20%;
-
-        img {
-            width: 460px;
-            height: 460px;
-            object-fit: contain;
-        }
-    }
-
     .counterNumber {
         font-size: 100px;
         font-weight: bold;
-        color: #333;
         margin-bottom: 10px;
+
+        // Style for the + sign
+        &::after {
+            content: "+";
+            font-size: 1em;
+            color: white; // Default color for + sign
+        }
     }
 
     .counterLabel {
         font-size: 32px;
-        color: black;
     }
 
     &:nth-child(1) {
+        background-color: #F15A22; // Active Members
+        color: white;
+
         .counterNumber {
-            color: #00ACB4;
+            color: white;
+        }
+
+        .counterLabel {
+            color: white;
         }
     }
 
     &:nth-child(2) {
+        background-color: white; // Events Organized
+        color: black;
+
         .counterNumber {
-            color: #F15A22;
+            color: black;
+
+            // Change the color of the + sign to orange
+            &::after {
+                color: #F15A22;
+            }
+        }
+
+        .counterLabel {
+            color: black;
         }
     }
 
     &:nth-child(3) {
+        background-color: #00ACB4; // Team Members
+        color: white;
+
         .counterNumber {
-            color: #00ACB4;
+            color: white;
+        }
+
+        .counterLabel {
+            color: white;
         }
     }
 }
 
 @media (max-width: 600px) {
     .container {
-        background-color: white; 
+        background-color: white;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        justify-content: center; 
+        justify-content: center;
         align-items: center;
         gap: 20px;
-        padding: 10px; 
-        margin-top: 0; 
+        padding: 10px;
+        margin-top: 0;
     }
 
     .counterCard {
-        padding: 20px; 
-        width: 90%;
-        height: auto; 
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-start;
-        position: relative;
-        border-radius: 36px;
+        padding: 20px;
+        width: 80%;
+        height: auto; // Adjust height for mobile view
         border: 1px solid #373737;
-        backdrop-filter: blur(8px);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-        .svgIcon {
-            z-index: -1;
-            position: absolute;
-            top: 10px;
-            left: 0px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            opacity: 20%;
+        .counterNumber {
+            font-size: 80px;
+            font-weight: bold;
+            margin-bottom: 10px;
 
-            img {
-                width: 300px; 
-                height: 230px; 
-                object-fit: contain;
+            // Style for the + sign
+            &::after {
+                content: "+";
+                font-size: 1em;
+                color: white; // Default color for + sign
             }
         }
 
-        .counterNumber {
-            font-size: 80px; 
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
         .counterLabel {
-            font-size: 28px; 
-            color: black; 
+            font-size: 28px;
         }
 
         &:nth-child(1) {
+            background-color: #F15A22;
+            color: white;
+
             .counterNumber {
-                color: #00ACB4;
+                color: white;
+            }
+
+            .counterLabel {
+                color: white;
             }
         }
 
         &:nth-child(2) {
+            background-color: white;
+            color: black;
+
             .counterNumber {
-                color: #F15A22;
+                color: black;
+
+                // Change the color of the + sign to orange
+                &::after {
+                    color: #F15A22;
+                }
+            }
+
+            .counterLabel {
+                color: black;
             }
         }
 
         &:nth-child(3) {
+            background-color: #00ACB4;
+            color: white;
+
             .counterNumber {
-                color: #00ACB4;
+                color: white;
+            }
+
+            .counterLabel {
+                color: white;
             }
         }
     }
