@@ -3,8 +3,8 @@
 import React, { useEffect, useRef } from 'react';
 import styles from '@/styles/landingPage.module.scss';
 import Image from "next/image";
-import GeekRoomLogo from "../../../../public/Images/GeekRoomLogo.svg";
-
+// import GeekRoomLogo from "../../../../public/Images/GeekRoomLogo.svg";
+import Geek2 from "../../../../public/Images/Transparent logo.png";
 const LandingPage = () => {
   const landingPageRef = useRef<HTMLDivElement>(null);
   const ballRef1 = useRef<HTMLDivElement>(null);
@@ -33,7 +33,7 @@ const LandingPage = () => {
     <div className={styles.landingPage} ref={landingPageRef}>
       <div className={styles.content}>
         <div className={styles.img}>
-          <Image src={GeekRoomLogo} alt="GeekRoomLogo" />
+          <Image src={Geek2} alt="GeekRoomLogo" />
         </div>
         <div className={styles.word}><h1>Geek Room</h1></div>
         <div className={styles.word}><p>A community dedicated to helping each other get better at coding together.</p></div>
