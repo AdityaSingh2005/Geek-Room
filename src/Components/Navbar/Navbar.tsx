@@ -6,7 +6,8 @@ import styles from "../../styles/navbar.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import GeekRoomLogo from "../../../public/Images/GeekRoomLogo.svg";
+// import GeekRoomLogo from "../../../public/Images/GeekRoomLogo.svg";
+import Geek2 from "../../../public/Images/Transparent logo.png";
 // import ThemeToggle from "../ThemeToggle/ThemeToggle";
 // import DarkMode from "../DarkMode/DarkMode";
 const Navbar = () => {
@@ -40,7 +41,7 @@ const Navbar = () => {
   return (
     <div className={styles.Navbar}>
       <div className={styles.GeekRoomLogo}>
-        <Image src={GeekRoomLogo} alt="GeekRoomLogo" />
+        <Image src={Geek2} alt="GeekRoomLogo" height={100} width={100}/>
       </div>
       <div className={styles.Hamburger} onClick={toggleMenu}>
         <div className={styles.Line}></div>

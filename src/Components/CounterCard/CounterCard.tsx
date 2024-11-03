@@ -1,15 +1,13 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
 import styles from '@/styles/counter.module.scss';
 
 interface CounterProps {
   finalNumber: number;
   label: string;
-  iconSrc: any;
 }
 
-const CounterCard: React.FC<CounterProps> = ({ finalNumber, label, iconSrc }) => {
+const CounterCard: React.FC<CounterProps> = ({ finalNumber, label }) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -48,11 +46,25 @@ const CounterCard: React.FC<CounterProps> = ({ finalNumber, label, iconSrc }) =>
   const formattedNumber = formatNumber(count);
 
   return (
-    <div className={styles.counterCard} ref={cardRef}>
-      <div className={styles.svgIcon}>
-        <Image src={iconSrc} alt={label} width={90} height={90} priority/>
+    <div
+      className={`${styles.counterCard} ${
+        label === "Active Members"
+          ? styles.orangeCard
+          : label === "Events Organized"
+          ? styles.whiteCard
+          : styles.blueCard
+      }`}
+      ref={cardRef}
+    >
+      <div className={styles.counterNumber}>
+        {formattedNumber}
+        <span
+          className={
+            label === "Events Organized" ? styles.orangePlus : styles.defaultPlus
+          }
+        >
+        </span>
       </div>
-      <div className={styles.counterNumber}>{formattedNumber}+</div>
       <div className={styles.counterLabel}>{label}</div>
     </div>
   );
@@ -63,7 +75,6 @@ interface HackathonDetail {
   name?: string;
   finalNumber?: number;
   label?: string;
-  iconSrc?: any;
 }
 
 interface ContainerProps {
@@ -72,16 +83,15 @@ interface ContainerProps {
 
 const CounterCardContainer: React.FC<ContainerProps> = ({ hackathonDetails = [] }) => {
   const defaultCounters: CounterProps[] = [
-    { finalNumber: 25000, label: "Active Members", iconSrc: "/Images/CounterCard1.svg" },
-    { finalNumber: 20, label: "Events Organized", iconSrc: "/Images/CounterCard2.svg" },
-    { finalNumber: 400, label: "Team Members", iconSrc: "/Images/CounterCard3.svg" }
+    { finalNumber: 25000, label: "Active Members" },
+    { finalNumber: 20, label: "Events Organized" },
+    { finalNumber: 400, label: "Team Members" }
   ];
 
   const counters = hackathonDetails.length > 0 
     ? hackathonDetails.map((detail, index) => ({
         finalNumber: detail.finalNumber ?? defaultCounters[index]?.finalNumber ?? 0,
         label: detail.label ?? defaultCounters[index]?.label ?? '',
-        iconSrc: detail.iconSrc ?? defaultCounters[index]?.iconSrc ?? '',
       }))
     : defaultCounters;
 
