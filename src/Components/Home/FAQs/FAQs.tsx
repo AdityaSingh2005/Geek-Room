@@ -38,7 +38,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
         </button>
         <div 
           className={`${styles.FAQAnswer} ${isOpen ? styles.open : ''}`}
-          style={{ maxHeight: isOpen ? '450px' : '0' }} 
+          style={{ maxHeight: isOpen ? '500px' : '0' }} 
         >
           <p>{answer}</p>  
         </div>
