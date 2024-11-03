@@ -1,13 +1,10 @@
-@import url('https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap');
 .event_page {
-  background-color: white;
-  color: black;
+  background-color: #1a1a1a;
   z-index: 2;
-  background-color: white;
 }
 
 .event_heading {
-  font-family: "Satoshi", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: lighter;
   padding-top: 2rem;
   margin-bottom: 10px;
@@ -21,7 +18,7 @@
 }
 
 .event_subHeading {
-  font-family: "Satoshi", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: light;
   display: flex;
   justify-content: center;
@@ -82,7 +79,7 @@
 }
 
 .event_card__button {
-  font-family: "Satoshi", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 15px;
   border-radius: 8px;
   background: white;
