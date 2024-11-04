@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "type": "Hackathon",
     "eventName": "Code Cubicle 2.0",
     "location": "Microsoft Office, Gurugram",
     "date": " 27th JUL - 3rd AUG, 2024",
@@ -20,7 +21,12 @@
         "position": "First",
         "teamName": "Study Buddy",
         "project": "Master new skills, expand your horizons, and achieve your goals",
-        "members": ["K Sree Charan", "Abhishek Kumar", "Sushil Kumar", "Shivani"],
+        "members": [
+          "K Sree Charan",
+          "Abhishek Kumar",
+          "Sushil Kumar",
+          "Shivani"
+        ],
         "medal": "/Images/Winner1.png"
       },
       {
@@ -29,23 +35,27 @@
         "project": "AI Interviewer is a cutting-edge platform that automates technical mock interviews",
         "members": ["Yuvraj Singh", "Sushant Dey"],
         "medal": "/Images/Winner2.png"
-
       },
       {
         "position": "Third",
         "teamName": "We-Safe",
         "project": "Ditch Danger, Map Smarter",
-        "members": ["Ananya Mangal", "Aryan Sood", "Dhruv Dawar", "Satvik Saksena"],
+        "members": [
+          "Ananya Mangal",
+          "Aryan Sood",
+          "Dhruv Dawar",
+          "Satvik Saksena"
+        ],
         "medal": "/Images/Winner3.png"
       }
     ],
-    "details" : [
+    "details": [
       {
         "number": 5921,
         "name": "Total Number of Registrations"
       },
       {
-        "number": 189, 
+        "number": 189,
         "name": "Total Number of Teams Participated"
       },
       {
@@ -54,8 +64,9 @@
       }
     ]
   },
-    {
+  {
     "id": 2,
+    "type": "Hackathon",
     "eventName": "Code Cubicle",
     "location": "Eccosphere Coworking Area, Noida",
     "date": " 27th JUL - 3rd AUG, 2024",
@@ -75,7 +86,12 @@
         "position": "First",
         "teamName": "Holesail",
         "project": "Peer to Peer tunnels for Instant Access",
-        "members": ["Suryaansh Singh", "Rohan Chaudhary", "Manjeet Aggarwal", "Utkarsh Payal"],
+        "members": [
+          "Suryaansh Singh",
+          "Rohan Chaudhary",
+          "Manjeet Aggarwal",
+          "Utkarsh Payal"
+        ],
         "medal": "/Images/Winner1.png"
       },
       {
@@ -84,7 +100,6 @@
         "project": "Where your data finds its secure fortress.",
         "members": ["Harshit Rai", "Aayushi Jain", "Akash Jain"],
         "medal": "/Images/Winner2.png"
-
       },
       {
         "position": "Third",
@@ -94,13 +109,13 @@
         "medal": "/Images/Winner3.png"
       }
     ],
-    "details" : [
+    "details": [
       {
         "number": 2255,
         "name": "Total Number of Registrations"
       },
       {
-        "number": 118, 
+        "number": 118,
         "name": "Total Number of Teams Participated"
       },
       {
@@ -109,8 +124,9 @@
       }
     ]
   },
-    {
+  {
     "id": 3,
+    "type": "Hackathon",
     "eventName": "Code Kshetra",
     "location": "Jagan Institute of Management Studies, Rohini",
     "date": " 5th FEB - 6th FEB, 2024",
@@ -139,7 +155,6 @@
         "project": "PROJECT NAME",
         "members": ["Member name", "Member name", "Member name"],
         "medal": "/Images/Winner2.png"
-
       },
       {
         "position": "Third",
@@ -149,13 +164,13 @@
         "medal": "/Images/Winner3.png"
       }
     ],
-    "details" : [
+    "details": [
       {
         "number": 4154,
         "name": "Total Number of Registrations"
       },
       {
-        "number": 360, 
+        "number": 360,
         "name": "Total Number of Teams Participated"
       },
       {
@@ -164,8 +179,9 @@
       }
     ]
   },
-    {
+  {
     "id": 4,
+    "type": "Hackathon",
     "eventName": "Tech Minds",
     "location": "Institute of Information Technology & Management, Janakpuri",
     "date": " 15th MAR - 16th MAR, 2024",
@@ -194,7 +210,6 @@
         "project": "PROJECT NAME",
         "members": ["Member name", "Member name", "Member name"],
         "medal": "/Images/Winner2.png"
-
       },
       {
         "position": "Third",
@@ -204,13 +219,13 @@
         "medal": "/Images/Winner3.png"
       }
     ],
-    "details" : [
+    "details": [
       {
         "number": 750,
         "name": "Total Number of Registrations"
       },
       {
-        "number": 53, 
+        "number": 53,
         "name": "Total Number of Teams Participated"
       },
       {
@@ -219,8 +234,9 @@
       }
     ]
   },
-    {
+  {
     "id": 5,
+    "type": "Hackathon",
     "eventName": "HackAvensis",
     "location": "Maharaja Surajmal Institute of Technology",
     "date": " 31st JAN - 1st FEB, 2023",
@@ -249,7 +265,6 @@
         "project": "PROJECT NAME",
         "members": ["Member name", "Member name", "Member name"],
         "medal": "/Images/Winner2.png"
-
       },
       {
         "position": "Third",
@@ -259,13 +274,13 @@
         "medal": "/Images/Winner3.png"
       }
     ],
-    "details" : [
+    "details": [
       {
         "number": 1000,
         "name": "Total Number of Registrations"
       },
       {
-        "number": 50, 
+        "number": 50,
         "name": "Total Number of Teams Participated"
       },
       {
