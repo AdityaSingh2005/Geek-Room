@@ -17,6 +17,34 @@
   align-items: center;
 }
 
+.event_dropdowns {
+  justify-content: center;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.event_dropdown {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: white;
+  outline: none;
+  transition: border-color 0.3s;
+
+  &:hover {
+    border-color: #0070f3;
+  }
+
+  &[type="date"] {
+    font-family: inherit;
+    appearance: none;
+    cursor: pointer;
+  }
+}
+
 .event_subHeading {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: light;
@@ -117,4 +145,3 @@
   top: 2vw;
   right: 15vw;
 }
-
