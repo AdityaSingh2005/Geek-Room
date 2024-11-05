@@ -5,22 +5,23 @@ import styles from '@/styles/ourWork.module.scss';
 interface WorkBoxProps {
   title: string;
   icon: string;
+  icon2: string;
 }
 
-const WorkBox: React.FC<WorkBoxProps> = ({ title, icon }) => (
-    <Image src={icon} alt={title} className={styles.icon} width={400} height={500} />
-  // <div className={styles.workBox}>
-    
-  //   <h3 className={styles.title}>{title}</h3>
-  // </div>
+const WorkBox: React.FC<WorkBoxProps> = ({ title, icon, icon2 }) => (
+  <div className={styles.box}>
+    <Image src={icon} alt={title} className={styles.icon} width={200} height={200} />
+    <Image src={icon2} alt={title} className={styles.icon2} width={80} height={70}/>
+    <h3 className={styles.title}>{title}</h3>
+  </div>
 );
 
 const OurWork: React.FC = () => {
   const workAreas: WorkBoxProps[] = [
-    { title: 'Quality', icon: '/Images/quality2.png' },
-    { title: 'Mentors', icon: '/Images/mentor2.png' },
-    { title: 'Develop', icon: '/Images/develop2.png' },
-    { title: 'Product', icon: '/Images/product2.png' },
+    { title: 'Quality', icon: '/Images/rect4.png', icon2:'/Images/Star.png' },
+    { title: 'Mentors', icon: '/Images/rect2.png', icon2:'/Images/People.png'  },
+    { title: 'Develop', icon: '/Images/rect3.png', icon2:'/Images/Comp.png' },
+    { title: 'Product', icon: '/Images/rect1.png', icon2:'/Images/Frame.png' },
   ];
 
   return (
@@ -28,7 +29,7 @@ const OurWork: React.FC = () => {
       <h2 className={styles.sectionTitle}>Our Work</h2>
       <div className={styles.gridContainer}>
         {workAreas.map((area, index) => (
-          <WorkBox key={index} title={area.title} icon={area.icon} />
+          <WorkBox key={index} title={area.title} icon={area.icon} icon2={area.icon2} />
         ))}
       </div>
     </section>
