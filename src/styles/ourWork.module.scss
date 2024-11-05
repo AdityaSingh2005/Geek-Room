@@ -7,6 +7,7 @@ $light-background: #2c2c2c;
 $gradient-light: linear-gradient(144deg, #F15A22, rgba(91, 66, 243, 0.15) 50%, #00ACB4); 
 $shadow-color: rgba($primary-color, 0.7);
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 .ourWork {
   padding: 0rem 3rem 5rem 3rem;
   background-color: white;
@@ -67,19 +68,54 @@ $shadow-color: rgba($primary-color, 0.7);
     box-shadow: 0 4px 10px $shadow-color;
   }
 }
-.icon {
-  width: 350px;
-  height: 500px;
-  margin-bottom: 1.3rem;
+.box{
+  text-align: center;
+  width: 276px;
+  border-radius: 27px;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  padding-top: 16px;
+  max-width: 276px;
+  // min-height: 220px;
+  margin-left: 16px;
+  // gap: 20px;
+  height: 277px;
 }
-.icon:hover{
-  transform: translateY(-10px);
-  box-shadow: 0 4px 10px $shadow-color;
+.box:nth-child(1):hover{
+  background-color: #FFF2DC;
+}
+.box:nth-child(2):hover{
+  background-color: #FFECEC;
+
+}
+.box:nth-child(3):hover{
+  background: #DAFDFF;
+
+}
+.box:nth-child(4):hover{
+  background: #FFD6C7;
+
+}
+.icon {
+  width: 200px;
+  height: 200px;
+  // margin-bottom: 1.3rem;
+}
+.icon2{
+  position: relative; 
+  top: -151px;
+  right: -2px;
+  z-index: 1;
+  width: 80px;
+  height: 85px;
 }
 .title {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-family: "Poppins", serif;
+  font-weight: 500;
   color:black;
-  margin: 0;
+  margin-top: -80px;
 }
 
 @keyframes floating-light {
