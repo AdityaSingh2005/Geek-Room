@@ -8,18 +8,19 @@ interface WorkBoxProps {
 }
 
 const WorkBox: React.FC<WorkBoxProps> = ({ title, icon }) => (
-  <div className={styles.workBox}>
-    <Image src={icon} alt={title} className={styles.icon} width={100} height={200} />
-    <h3 className={styles.title}>{title}</h3>
-  </div>
+    <Image src={icon} alt={title} className={styles.icon} width={400} height={500} />
+  // <div className={styles.workBox}>
+    
+  //   <h3 className={styles.title}>{title}</h3>
+  // </div>
 );
 
 const OurWork: React.FC = () => {
   const workAreas: WorkBoxProps[] = [
-    { title: 'Quality', icon: '/Images/quality.png' },
-    { title: 'Mentors', icon: '/Images/mentor.png' },
-    { title: 'Develop', icon: '/Images/develop.png' },
-    { title: 'Product', icon: '/Images/product.png' },
+    { title: 'Quality', icon: '/Images/quality2.png' },
+    { title: 'Mentors', icon: '/Images/mentor2.png' },
+    { title: 'Develop', icon: '/Images/develop2.png' },
+    { title: 'Product', icon: '/Images/product2.png' },
   ];
 
   return (

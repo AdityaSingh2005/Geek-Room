@@ -30,6 +30,7 @@ $shadow-color: rgba($primary-color, 0.7);
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  margin-right: 65px;
 }
 
 .workBox {
@@ -66,13 +67,15 @@ $shadow-color: rgba($primary-color, 0.7);
     box-shadow: 0 4px 10px $shadow-color;
   }
 }
-
 .icon {
-  width: 120px;
-  height: 120px;
-  margin-bottom: 1.5rem;
+  width: 350px;
+  height: 500px;
+  margin-bottom: 1.3rem;
 }
-
+.icon:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 4px 10px $shadow-color;
+}
 .title {
   font-size: 1.8rem;
   color:black;
