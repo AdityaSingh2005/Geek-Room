@@ -14,11 +14,14 @@ interface FAQItemProps {
 const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
   // const [displayedAnswer, setDisplayedAnswer] = useState('');
+  // const [isAnimating, setIsAnimating] = useState(false);
   const answerRef = useRef<HTMLDivElement>(null);
 
     const HandleAnswer = () => {
       setIsOpen(!isOpen);
     };
+
+   
     
     return (
       <div className={styles.FAQItem}>
@@ -68,12 +71,15 @@ const FAQs = () => {
     }
   ];
 
+  const ballRef1 = useRef<HTMLDivElement>(null);
+  const ballRef2 = useRef<HTMLDivElement>(null);
+
   return (
     <div className={styles.FAQ}>
       <div className={styles.FAQs_Box}>
         <div className={styles.FAQ_Heading}>
-          <h1>FAQs</h1>
-          <p>Frequently Asked Questions</p>
+          <h1>FAQS</h1>
+          {/* <p>Frequently Asked Questions</p> */}
         </div>
         <div className={styles.FAQ_Container}>
           {faqData.map((faq, index) => (
@@ -81,8 +87,8 @@ const FAQs = () => {
           ))}
         </div>
       </div>
-      <div className={styles.ball1}></div>
-      <div className={styles.ball2}></div>
+      <div className={styles.ball1} ref={ballRef1}></div>
+      <div className={styles.ball2} ref={ballRef2}></div>
     </div>
   )
 }
