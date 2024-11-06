@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@/styles/contactForm.module.scss";
-// import Image from "next/image";
-// import Contact_Image from "../../../public/Images/contact.webp";
+import Image from "next/image";
+import Contact_Image from "../../../public/Images/contact.webp";
 
 const ContactForm = () => {
   return (
@@ -31,10 +31,8 @@ const ContactForm = () => {
             <button type="submit">Send Message</button>
           </form>
         </div>
-        {/* <div className={styles.contactFormImage}>
-          <Image src={Contact_Image} alt="Contact" priority />
-        </div> */}
       </div>
+      <div className={styles.contactFormImage}> <Image src={Contact_Image} alt="Contact" priority /> </div> 
     </div>
   );
 };
