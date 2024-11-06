@@ -67,10 +67,14 @@ const AboutLanding: React.FC = () => {
     { imageUrl: '/About/About6.jpg', alt: 'Image 2' },
     { imageUrl: '/About/About7.jpg', alt: 'Image 2' },
     { imageUrl: '/About/About8.jpg', alt: 'Image 2' },
+    { imageUrl: '/About/About9.jpg', alt: 'Image 3' },
+    { imageUrl: '/About/About10.jpg', alt: 'Image 2' },
+    { imageUrl: '/About/About11.jpg', alt: 'Image 2' },
+    { imageUrl: '/About/About12.jpg', alt: 'Image 4' },
 
   ];
 
-  const cardsRow2 = [
+ {/*} const cardsRow2 = [
     { imageUrl: '/About/About9.jpg', alt: 'Image 3' },
     { imageUrl: '/About/About10.jpg', alt: 'Image 2' },
     { imageUrl: '/About/About11.jpg', alt: 'Image 2' },
@@ -81,9 +85,13 @@ const AboutLanding: React.FC = () => {
     { imageUrl: '/About/About16.jpg', alt: 'Image 2' },
 
 
-  ];
+  ];*/}
 
   const cardsRow3 = [
+    { imageUrl: '/About/About13.jpg', alt: 'Image 4' },
+    { imageUrl: '/About/About14.jpg', alt: 'Image 4' },
+    { imageUrl: '/About/About15.jpg', alt: 'Image 2' },
+    { imageUrl: '/About/About16.jpg', alt: 'Image 2' },
     { imageUrl: '/About/About5.jpg', alt: 'Image 5' },
     { imageUrl: '/About/About10.jpg', alt: 'Image 5' },
     { imageUrl: '/About/About11.jpg', alt: 'Image 5' },
@@ -98,7 +106,7 @@ const AboutLanding: React.FC = () => {
   return (
     <div className={styles.aboutPage}>
       <InfiniteCards cards={cardsRow1} speed={1} direction="left" />
-      <InfiniteCards cards={cardsRow2} speed={1.5} direction="right" />
+      {/*<InfiniteCards cards={cardsRow2} speed={1.5} direction="right" />*/}
       <InfiniteCards cards={cardsRow3} speed={2} direction="left" />
     </div>
   );
