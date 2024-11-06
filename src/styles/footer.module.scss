@@ -41,9 +41,9 @@
   
         .link {
           text-decoration: none;
-          color: #333;
+          color: #646363;
           font-size: 1.2rem;
-          font-weight: bold;
+          font-weight: lighter;
   
           &:hover {
             color: #00acb4;
@@ -62,9 +62,9 @@
   
         .copyright,
         .designedBy {
-          color: #333;
+          color: #646363;
           font-size: 1.2rem;
-          font-weight: bold;
+          font-weight: lighter;
           margin: 1rem 0;
           flex: 1;
           text-align: center;
@@ -80,7 +80,7 @@
           .socialIcon {
             width: 32px;
             height: 32px;
-            color: #333;
+            color: #646363;
   
             &:hover {
               color: #00acb4;

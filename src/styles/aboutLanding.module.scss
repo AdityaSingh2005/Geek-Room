@@ -7,6 +7,9 @@
     align-items: center;
     justify-content: center;
     background-color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+
 }
 
 .aboutPage {
@@ -20,10 +23,10 @@
 .infiniteCardsRow {
     display: flex;
     overflow-x: hidden;
-    white-space: nowrap;
-    margin-bottom: 40px;
+    //white-space: nowrap;
+    margin-bottom: 20px;
     background-color: white; 
-    padding: 0 20px;
+    //padding: 0 10px;
 }
 
 .card {
@@ -75,7 +78,7 @@
 
     .card {
         width: 200px; 
-        height: auto;
+        height: 180px;
         margin-right: 15px;
         box-shadow: 0 4px 8px rgba(150, 150, 150, 0.4); 
         transition: transform 0.3s ease, box-shadow 0.3s ease; 
