@@ -5,9 +5,12 @@ import hackathondata from "./JSON/hackathon.json";
 import styles from "@/styles/event.module.scss";
 
 const Hackathons = () => {
+  // Set initial dates
   const [selectedType, setSelectedType] = useState("");
-  const [startDate, setStartDate] = useState("");
-  const [endDate, setEndDate] = useState("");
+  const [startDate, setStartDate] = useState("2023-01-01");
+  const [endDate, setEndDate] = useState(
+    new Date().toISOString().split("T")[0]
+  );
 
   const handleTypeChange = (event: any) => {
     setSelectedType(event.target.value);
@@ -21,7 +24,6 @@ const Hackathons = () => {
     setEndDate(event.target.value);
   };
 
-  // Function to parse the event date range and return start and end Date objects
   const parseEventDateRange = (dateRangeString: any) => {
     const match = dateRangeString.match(
       /(\d+)\w*\s+([A-Z]+)\s*-\s*(\d+)\w*\s+([A-Z]+),\s+(\d{4})/
@@ -35,13 +37,11 @@ const Hackathons = () => {
     return null;
   };
 
-  // Function to check if an event date range is within the selected date range
   const isWithinDateRange = (eventDateRange: any) => {
     const parsedDates = parseEventDateRange(eventDateRange);
     if (!parsedDates) return false;
 
     const { startDate: eventStartDate, endDate: eventEndDate } = parsedDates;
-
     const start = startDate ? new Date(startDate) : null;
     const end = endDate ? new Date(endDate) : null;
 
@@ -54,10 +54,9 @@ const Hackathons = () => {
     if (end) {
       return eventStartDate <= end;
     }
-    return true; // If no date range is selected, include the event
+    return true;
   };
 
-  // Filter events based on selected filters
   const filteredEvents = hackathondata.filter((detail) => {
     const matchesType = selectedType ? detail.type === selectedType : true;
     const matchesDateRange = isWithinDateRange(detail.date);
@@ -73,28 +72,48 @@ const Hackathons = () => {
 
       {/* Dropdown Filters */}
       <div className={styles.event_dropdowns}>
-        <select
-          className={styles.event_dropdown}
-          value={selectedType}
-          onChange={handleTypeChange}
-        >
-          <option value="">All Types</option>
-          <option value="Hackathon">Hackathon</option>
-          <option value="Fun">Fun</option>
-          <option value="Speaker Session">Speaker Session</option>
-        </select>
-        <input
-          type="date"
-          className={styles.event_dropdown}
-          value={startDate}
-          onChange={handleStartDateChange}
-        />
-        <input
-          type="date"
-          className={styles.event_dropdown}
-          value={endDate}
-          onChange={handleEndDateChange}
-        />
+        <div className={styles.event_filter}>
+          <label htmlFor="eventType" className={styles.label}>
+            Event Type
+          </label>
+          <select
+            id="eventType"
+            className={styles.event_dropdown}
+            value={selectedType}
+            onChange={handleTypeChange}
+          >
+            <option value="">All Types</option>
+            <option value="Hackathon">Hackathon</option>
+            <option value="Fun">Fun</option>
+            <option value="Speaker Session">Speaker Session</option>
+          </select>
+        </div>
+
+        <div className={styles.event_filter}>
+          <label htmlFor="startDate" className={styles.label}>
+            Start Date
+          </label>
+          <input
+            type="date"
+            id="startDate"
+            className={styles.event_dropdown}
+            value={startDate}
+            onChange={handleStartDateChange}
+          />
+        </div>
+
+        <div className={styles.event_filter}>
+          <label htmlFor="endDate" className={styles.label}>
+            End Date
+          </label>
+          <input
+            type="date"
+            id="endDate"
+            className={styles.event_dropdown}
+            value={endDate}
+            onChange={handleEndDateChange}
+          />
+        </div>
       </div>
 
       <div className={styles.event_card_container}>
