@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 .FAQ {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 20px 0;
 
   .FAQs_Box {
@@ -27,10 +28,13 @@
       align-items: center;
       gap: 10px;
 
+
       h1 {
         margin: 0;
         color: #222222;
-        font-size: 60px;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-size: 10rem;
       }
 
       p {
@@ -51,6 +55,9 @@
     flex-direction: column;
     gap: 15px;
     width: 100vh;
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 1.5rem;
   }
 
   .FAQItem {
@@ -107,6 +114,7 @@
       .FAQ_Heading {
         h1 {
           margin-left: 2rem;
+          font-size: 3.5rem;
         }
         p {
           margin-left: 2rem;

@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <div className={styles.Navbar}>
       <div className={styles.GeekRoomLogo}>
-        <Image src={Geek2} alt="GeekRoomLogo" height={100} width={100}/>
+        <Image src={Geek2} alt="GeekRoomLogo" height={60} width={60}/>
       </div>
       <div className={styles.Hamburger} onClick={toggleMenu}>
         <div className={styles.Line}></div>
