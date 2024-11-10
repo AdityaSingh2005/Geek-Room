@@ -1,11 +1,11 @@
 // Navbar.jsx
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../../styles/navbar.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 // import GeekRoomLogo from "../../../public/Images/GeekRoomLogo.svg";
 import Geek2 from "../../../public/Images/Transparent logo.png";
 // import ThemeToggle from "../ThemeToggle/ThemeToggle";
@@ -13,6 +13,8 @@ import Geek2 from "../../../public/Images/Transparent logo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
+  const [targetSection, setTargetSection] = useState<string | null>(null);
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -24,8 +26,33 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  
+  useEffect(() => {
+    if (targetSection && pathname === "/") {
+      const targetElement = document.querySelector(targetSection);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+      setTargetSection(null); 
+    }
+  }, [pathname, targetSection]);
 
   const handleScroll = (e: any, href: any) => {
+    e.preventDefault();
+
+    if (href.startsWith("#") && pathname === "/") {
+      const targetElement = document.querySelector(href);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    } else if (href.startsWith("#")) {
+      setTargetSection(href);
+      router.push("/");
+    } else {
+      router.push(href);
+    }
+  };
+  {/*const handleScroll = (e: any, href: any) => {
     e.preventDefault();
 
     if (href.startsWith("#")) {
@@ -36,7 +63,7 @@ const Navbar = () => {
     } else {
       window.location.href = href;
     }
-  };
+  };*/}
 
   return (
     <div className={styles.Navbar}>
