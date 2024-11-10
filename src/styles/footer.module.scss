@@ -1,136 +1,137 @@
 .footer {
-    background-color: white;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 1rem;
+
+  box-shadow: 0 -4px 6px -2px rgba(0, 0, 0, 0.3);
+
+  .footerContent {
     display: flex;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 1rem;
-  
-    .footerContent {
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    height: auto;
+
+    .logoSection {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      max-width: 1200px;
-      width: 100%;
-      text-align: center;
-      height: auto;
-  
-      .logoSection {
+      margin-bottom: 1.5rem;
+
+      .logoWithText {
         display: flex;
-        justify-content: center;
         align-items: center;
-        margin-bottom: 1.5rem;
-  
-        .logoWithText {
-          display: flex;
-          align-items: center;
-  
-          .geekRoomText {
-            font-size: 2.3rem;
-            font-weight: bold;
-            color: #333;
-            margin-left: 1.5rem;
-          }
+
+        .geekRoomText {
+          font-size: 2.3rem;
+          font-weight: bold;
+          color: #333;
+          margin-left: 1.5rem;
         }
       }
-  
-      .linksSection {
+    }
+
+    .linksSection {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-bottom: 1.5rem;
+
+      .link {
+        text-decoration: none;
+        color: #646363;
+        font-size: 1.2rem;
+        font-weight: lighter;
+
+        &:hover {
+          color: #00acb4;
+        }
+      }
+    }
+
+    .bottomRow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 1.5rem 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+
+      .copyright,
+      .designedBy {
+        color: #646363;
+        font-size: 1.2rem;
+        font-weight: lighter;
+        margin: 1rem 0;
+        flex: 1;
+        text-align: center;
+      }
+
+      .socialIcons {
         display: flex;
         justify-content: center;
-        gap: 3rem;
-        margin-bottom: 1.5rem;
-  
-        .link {
-          text-decoration: none;
+        gap: 2.3rem;
+        margin: 1rem 0;
+        flex: 1;
+
+        .socialIcon {
+          width: 32px;
+          height: 32px;
           color: #646363;
-          font-size: 1.2rem;
-          font-weight: lighter;
-  
+
           &:hover {
             color: #00acb4;
           }
         }
       }
-  
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footerContent {
+      padding: 0 1rem;
+
+      .linksSection {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
       .bottomRow {
-        display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
-        width: 100%;
-        padding: 1.5rem 1rem;
-        flex-wrap: wrap;
-        margin-top: 1rem;
-  
+        padding: 1.5rem 0;
+
         .copyright,
         .designedBy {
-          color: #646363;
-          font-size: 1.2rem;
-          font-weight: lighter;
-          margin: 1rem 0;
-          flex: 1;
-          text-align: center;
-        }
-  
-        .socialIcons {
-          display: flex;
-          justify-content: center;
-          gap: 2.3rem;
-          margin: 1rem 0;
-          flex: 1;
-  
-          .socialIcon {
-            width: 32px;
-            height: 32px;
-            color: #646363;
-  
-            &:hover {
-              color: #00acb4;
-            }
-          }
-        }
-      }
-    }
-  
-    @media (max-width: 768px) {
-      .footerContent {
-        padding: 0 1rem;
-  
-        .linksSection {
-          flex-direction: column;
-          gap: 1rem;
-        }
-  
-        .bottomRow {
-          flex-direction: column;
-          align-items: center;
-          padding: 1.5rem 0;
-  
-          .copyright,
-          .designedBy {
-            width: 100%;
-            margin-bottom: 1rem;
-          }
-  
-          .socialIcons {
-            gap: 1.5rem;
-            margin: 1rem 0;
-            width: 100%;
-          }
-        }
-      }
-    }
-  
-    @media (max-width: 480px) {
-      .footerContent {
-        .logoSection {
+          width: 100%;
           margin-bottom: 1rem;
         }
-  
-        .linksSection {
-          .link {
-            font-size: 1.2rem;
-          }
+
+        .socialIcons {
+          gap: 1.5rem;
+          margin: 1rem 0;
+          width: 100%;
         }
       }
     }
   }
-  
+
+  @media (max-width: 480px) {
+    .footerContent {
+      .logoSection {
+        margin-bottom: 1rem;
+      }
+
+      .linksSection {
+        .link {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
