@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from "@/styles/contactForm.module.scss";
-import Contact_Image from "../../../public/Images/contact.webp";
+import Contact_Image from "../../../public/Images/contactUsImage1.jpg";
 
 const ContactForm: React.FC = () => {
   const contactPageRef = useRef<HTMLDivElement>(null);
