@@ -70,6 +70,7 @@
           outline: none;
           background-color: transparent;
           transition: border-color 0.3s;
+          color: #000; 
 
           &:focus {
             border-color: #666;
@@ -88,7 +89,7 @@
           top: 10px;
           left: 0;
           font-size: 2rem;
-          color: #666;
+          color: #000; 
           pointer-events: none;
           transition: 0.3s ease all;
         }
@@ -116,6 +117,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    img {
+      max-width: 80%; 
+      height: auto; 
+      object-fit: cover; 
+    }
   }
 
   .ball1,
@@ -151,7 +158,11 @@
     padding: 40px 20px;
 
     .contactFormImage {
-      order: -1; // This moves the image before the heading in mobile view
+      order: -1; 
+
+      img {
+        max-width: 60%; 
+      }
     }
 
     .contactFormHeading {
@@ -212,6 +223,10 @@
     button {
       padding: 8px 20px;
       font-size: 0.9rem;
+    }
+
+    .contactFormImage img {
+      max-width: 50%; 
     }
   }
 }
