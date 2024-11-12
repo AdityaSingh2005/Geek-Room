@@ -1,16 +1,18 @@
 @import url("https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
 
 .contactFormContainer {
   display: flex;
+  padding-left: 15px;
   justify-content: center;
   align-items: center;
   padding: 60px 20px;
-  padding-left: 80px;
   font-family: "Satoshi", sans-serif;
   background-color: white;
   gap: 50px;
   flex-direction: row;
+  position: relative;
+  overflow: hidden;
 
   .contactFormHeading,
   .contactFormContent,
@@ -23,6 +25,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding-left: 20px;
 
     h2 {
       font-size: 7rem;
@@ -67,6 +70,7 @@
           outline: none;
           background-color: transparent;
           transition: border-color 0.3s;
+          color: #000; 
 
           &:focus {
             border-color: #666;
@@ -85,7 +89,7 @@
           top: 10px;
           left: 0;
           font-size: 2rem;
-          color: #aaa;
+          color: #000; 
           pointer-events: none;
           transition: 0.3s ease all;
         }
@@ -113,21 +117,58 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    img {
+      max-width: 80%; 
+      height: auto; 
+      object-fit: cover; 
+    }
+  }
+
+  .ball1,
+  .ball2 {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    transition: transform 0.2s ease-out;
+  }
+
+  .ball1 {
+    width: 30vw;
+    height: 30vw;
+    background-color: rgba(115, 239, 245, 0.3);
+    top: 20vw;
+    left: 6vw;
+  }
+
+  .ball2 {
+    width: 20vw;
+    height: 20vw;
+    background-color: rgba(247, 149, 114, 0.5);
+    top: 2vw;
+    right: 15vw;
   }
 
   @media (max-width: 1024px) {
-    padding-left: 30px;
     gap: 20px;
   }
 
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 40px 20px;
-    padding-left: 15px;
+
+    .contactFormImage {
+      order: -1; 
+
+      img {
+        max-width: 60%; 
+      }
+    }
 
     .contactFormHeading {
       width: 100%;
       text-align: center;
+      padding-left: 0;
 
       h2 {
         font-size: 5rem;
@@ -139,20 +180,21 @@
       }
     }
 
-    .contactFormContent,
-    .contactFormImage {
+    .contactFormContent {
       width: 100%;
-      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
     }
 
-    .contactform {
+    .contactform,
+    .contactFormImage {
       max-width: 100%;
+      padding: 10px;
     }
   }
 
   @media (max-width: 480px) {
-    padding-left: 10px;
-
     .contactFormHeading {
       h2 {
         font-size: 4rem;
@@ -181,6 +223,10 @@
     button {
       padding: 8px 20px;
       font-size: 0.9rem;
+    }
+
+    .contactFormImage img {
+      max-width: 50%; 
     }
   }
 }
