@@ -14,7 +14,7 @@
   padding: 30px;
   text-align: center;
   width: 379px;
-  height: 250px; // Set the height as specified
+  height: 250px; 
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -30,11 +30,10 @@
     font-weight: bold;
     margin-bottom: 10px;
 
-    // Style for the + sign
     &::after {
       content: "+";
       font-size: 1em;
-      color: white; // Default color for + sign
+      color: white;
     }
   }
 
@@ -43,8 +42,9 @@
   }
 
   &:nth-child(1) {
-    background-color: #f15a22; // Active Members
+    background-color: #F6845A;
     color: white;
+    border: none;
 
     .counterNumber {
       color: white;
@@ -56,15 +56,14 @@
   }
 
   &:nth-child(2) {
-    background-color: white; // Events Organized
+    background-color: white;
     color: black;
 
     .counterNumber {
       color: black;
 
-      // Change the color of the + sign to orange
       &::after {
-        color: #f15a22;
+        color: #F6845A;
       }
     }
 
@@ -74,8 +73,9 @@
   }
 
   &:nth-child(3) {
-    background-color: #00acb4; // Team Members
+    background-color: #67CACF;
     color: white;
+    border: none;
 
     .counterNumber {
       color: white;
@@ -103,7 +103,7 @@
   .counterCard {
     padding: 20px;
     width: 80%;
-    height: auto; // Adjust height for mobile view
+    height: auto;
     border: 1px solid #373737;
 
     .counterNumber {
@@ -111,11 +111,10 @@
       font-weight: bold;
       margin-bottom: 10px;
 
-      // Style for the + sign
       &::after {
         content: "+";
         font-size: 1em;
-        color: white; // Default color for + sign
+        color: white;
       }
     }
 
@@ -124,8 +123,9 @@
     }
 
     &:nth-child(1) {
-      background-color: #f15a22;
+      background-color: #F6845A;
       color: white;
+      border: none;
 
       .counterNumber {
         color: white;
@@ -143,9 +143,9 @@
       .counterNumber {
         color: black;
 
-        // Change the color of the + sign to orange
+
         &::after {
-          color: #f15a22;
+          color: #F6845A;
         }
       }
 
@@ -155,8 +155,9 @@
     }
 
     &:nth-child(3) {
-      background-color: #00acb4;
+      background-color: #67CACF;
       color: white;
+      border: none;
 
       .counterNumber {
         color: white;
