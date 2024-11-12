@@ -51,6 +51,7 @@ const Navbar = () => {
     } else {
       router.push(href);
     }
+    setIsOpen(false);
   };
   {/*const handleScroll = (e: any, href: any) => {
     e.preventDefault();

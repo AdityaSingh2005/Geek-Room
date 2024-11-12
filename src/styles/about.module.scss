@@ -6,9 +6,9 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  /*margin-top: 3rem: 
-  margin-bottom: 3rem;*/
-  font-family: "Satoshi", sans-serif;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  //font-family: "Satoshi", sans-serif;
   background-color: white{/*} #1a1a1a*/};
   color: black{/*} white*/};
 
@@ -23,7 +23,9 @@
     padding: 10px;
 
     h1 {
-      font-size: 6rem;
+      font-family: 'Bebas Neue';
+      font-weight: 400;
+      font-size: 206px;
       text-align: center;
     }
 
@@ -46,6 +48,11 @@
       }
 
       .aboutContentText {
+        font-family: 'Poppins';
+        font-weight: 500;
+        font-size: 23px;
+        text-align: center;
+        color:#5E5B5B;
         display: flex;
         flex-direction: column;   
         gap: 20px;
