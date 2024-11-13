@@ -111,22 +111,22 @@
 
   .FAQAnswer {
     overflow: hidden;
-    transition: max-height 0.5s ease-out;
+    transition: max-height 0.5s ease-out, padding 0.5s ease;
     max-height: 0;
     line-height: 30px;
     color: #222222;
     opacity: 70%;
     background-color: #f3f3f3;
     padding: 0 20px;
+    font-size: 20px;
     display: hidden;
     // transition: padding 0.s ease-in-out;
 
     &.open {
-      // margin-top: 10px;
       max-height: 400px;
       background-color: #f3f3f3 !important;
-      // padding: 1rem;
-      padding: 20px;
+      padding: 20px 20px;
+      top: 10%;
     }
     // &.animating { padding: 1rem; }
   }
@@ -143,7 +143,7 @@
   .ball1 {
     width: 30vw;
     height: 30vw;
-    background-color: #00abb41c;
+    background-color: #00abb41d;
     top: 20vw;
     left: 4vw;
   }
@@ -163,7 +163,7 @@
     .FAQs_Box {
       .FAQ_Heading {
         h1 {
-          margin-left: 2rem;
+          // margin-left: 2rem;
           font-size: 3.5rem;
         }
         p {
@@ -239,6 +239,7 @@
     line-height: 30px;
     background-color: #f3f3f3;
     opacity: 94%;
+    font-size: 16px !important;
     font-family: "Poppins", sans-serif;
 
     &.open {
