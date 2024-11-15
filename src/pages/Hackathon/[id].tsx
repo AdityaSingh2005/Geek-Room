@@ -8,7 +8,7 @@ import Navbar from '@/Components/Navbar/Navbar';
 import Footer from '@/Components/Footer/Footer';
 import DevfolioLogo from '../../../public/Sponsors/devfolioWhite.png';
 import WinnerTeams from '@/Components/Events/winnerTeams';  
-import CounterCardContainer from '@/Components/CounterCard/CounterCard';
+{/*import CounterCardContainer from '@/Components/CounterCard/CounterCard';*/}
 
 const HackathonDetail = () => {
   const router = useRouter();
@@ -63,7 +63,7 @@ const HackathonDetail = () => {
           </div>
         </div>
         {hackathon.winners && <WinnerTeams winners={hackathon.winners} />}
-        <CounterCardContainer hackathonDetails={hackathon.details} />
+        {/*<CounterCardContainer hackathonDetails={hackathon.details} />*/}
       </div>
       <Footer />
     </>

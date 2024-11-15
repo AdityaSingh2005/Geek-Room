@@ -1,6 +1,6 @@
 .hackathonDetail {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #1a1a1a;
+    background-color: rgba(255, 255, 255);
     .hero {
         position: relative;
         height: 50vh;
@@ -54,11 +54,13 @@
             }
 
             h3 {
+                color: black;
                 font-size: 2rem;
                 margin-bottom: 1rem;
             }
 
             p {
+                color: black;
                 line-height: 1.8rem;
                 margin-bottom: 1rem;
             }
@@ -69,7 +71,7 @@
                 align-items: center;
                 gap: 10px;
                 background-color: transparent;
-                color: #fff;
+                color: black;
                 border: 2px solid #F15A22;
                 border-radius: 4px;
                 padding: 0.5rem 1rem;
