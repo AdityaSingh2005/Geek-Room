@@ -1,30 +1,30 @@
 import React, { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import hackathondata from "./JSON/hackathon.json";
 import styles from "@/styles/event.module.scss";
+import Image from "next/image";
+import Link from "next/link";
 
 const Hackathons = () => {
   // Set initial dates
-  const [selectedType, setSelectedType] = useState("");
-  const [startDate, setStartDate] = useState("2023-01-01");
-  const [endDate, setEndDate] = useState(
-    new Date().toISOString().split("T")[0]
-  );
+  const [selectedType, setSelectedType] = useState<string>("");
+  const [startDate, setStartDate] = useState<Date | null>(null); // Allow null type
+  const [endDate, setEndDate] = useState<Date | null>(new Date()); // Initialize with current date
 
-  const handleTypeChange = (event: any) => {
+  const handleTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedType(event.target.value);
   };
 
-  const handleStartDateChange = (event: any) => {
-    setStartDate(event.target.value);
+  const handleStartDateChange = (date: Date | null) => {
+    setStartDate(date);
   };
 
-  const handleEndDateChange = (event: any) => {
-    setEndDate(event.target.value);
+  const handleEndDateChange = (date: Date | null) => {
+    setEndDate(date);
   };
 
-  const parseEventDateRange = (dateRangeString: any) => {
+  const parseEventDateRange = (dateRangeString: string) => {
     const match = dateRangeString.match(
       /(\d+)\w*\s+([A-Z]+)\s*-\s*(\d+)\w*\s+([A-Z]+),\s+(\d{4})/
     );
@@ -37,13 +37,13 @@ const Hackathons = () => {
     return null;
   };
 
-  const isWithinDateRange = (eventDateRange: any) => {
+  const isWithinDateRange = (eventDateRange: string) => {
     const parsedDates = parseEventDateRange(eventDateRange);
     if (!parsedDates) return false;
 
     const { startDate: eventStartDate, endDate: eventEndDate } = parsedDates;
-    const start = startDate ? new Date(startDate) : null;
-    const end = endDate ? new Date(endDate) : null;
+    const start = startDate ? startDate : null;
+    const end = endDate ? endDate : null;
 
     if (start && end) {
       return eventStartDate <= end && eventEndDate >= start;
@@ -93,12 +93,11 @@ const Hackathons = () => {
           <label htmlFor="startDate" className={styles.label}>
             Start Date
           </label>
-          <input
-            type="date"
-            id="startDate"
-            className={styles.event_dropdown}
-            value={startDate}
+          <DatePicker
+            selected={startDate}
             onChange={handleStartDateChange}
+            dateFormat="yyyy-MM-dd"
+            className={styles.event_dropdown}
           />
         </div>
 
@@ -106,12 +105,11 @@ const Hackathons = () => {
           <label htmlFor="endDate" className={styles.label}>
             End Date
           </label>
-          <input
-            type="date"
-            id="endDate"
-            className={styles.event_dropdown}
-            value={endDate}
+          <DatePicker
+            selected={endDate}
             onChange={handleEndDateChange}
+            dateFormat="yyyy-MM-dd"
+            className={styles.event_dropdown}
           />
         </div>
       </div>
