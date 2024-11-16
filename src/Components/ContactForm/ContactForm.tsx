@@ -1,9 +1,6 @@
-// ContactForm.tsx
 "use client"
 import React, { useEffect, useRef } from "react";
-import Image from "next/image";
 import styles from "@/styles/contactForm.module.scss";
-import Contact_Image from "../../../public/Images/contactUsImage1.jpg";
 
 const ContactForm: React.FC = () => {
   const contactPageRef = useRef<HTMLDivElement>(null);
@@ -55,9 +52,6 @@ const ContactForm: React.FC = () => {
             </div>
             <button type="submit">Send Message</button>
           </form>
-        </div>
-        <div className={styles.contactFormImage}>
-          <Image src={Contact_Image} alt="Contact" priority />
         </div>
       </div>
       <div className={styles.ball1} ref={ballRef1}></div>
