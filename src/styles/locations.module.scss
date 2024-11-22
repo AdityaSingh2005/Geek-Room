@@ -35,10 +35,7 @@
         font-weight: 400;
         font-size: 1.5rem;
     }
-}
-div {
-    position: relative;
-    z-index: 10;
+
 }
 
     .collegeGrid {
@@ -50,17 +47,17 @@ div {
         justify-items: center;
         font-weight: 400;
         padding: 0 5%;
+        position: relative;
+        z-index: 100;
     }
-
-    .collegeItem {
+    .collegeItem, .sponsor{
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 20px;
         width: 100%;
-        max-width: 400px;
         min-height: 220px;
-        padding: 0 30px;
+        padding: 0 40px;
         border-radius: 27px;
         background-color: #fff0;
         box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
@@ -84,6 +81,14 @@ div {
             color: #575757;
             margin: 0;
         }
+    }
+
+    .collegeItem {
+        max-width: 400px;
+    }
+
+    .sponsor {
+        padding: 0 40px;
     }
 
     .ball1,

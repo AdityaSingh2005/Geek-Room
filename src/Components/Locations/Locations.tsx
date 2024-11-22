@@ -2,6 +2,13 @@
 import React, { useEffect, useRef } from 'react';
 import styles from '@/styles/locations.module.scss';
 import Image from 'next/image';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/autoplay";
 
 const collegeList = [
   { name: 'Maharaja Surajmal Institute of Technology', logo: '/Locations/msit.png' },
@@ -26,6 +33,19 @@ const sponsorList = [
   { name: 'ETH India', logo: '/Sponsors/ETHIndia.png' },
 
 ];
+
+const breakpoints = {
+  600: {
+    slidesPerView: 2,
+    centeredSlides: true,
+    spaceBetween: 50,
+  },
+  1024: {
+    slidesPerView: 3,
+    centeredSlides: true,
+    spaceBetween: 70,
+  },
+};
 
 const Locations = () => {
 
@@ -77,19 +97,40 @@ const Locations = () => {
         <h1>Past Partners</h1>
         <p>We&apos;re proud to partner with industry leaders who share our vision for a tech-empowered future.</p>
       </div>
-      <div className={styles.collegeGrid}>
-        {sponsorList.map((college, index) => (
-          <div key={index} className={styles.collegeItem}>
+
+      <Swiper
+        style={{
+          width: '100%',
+          padding: '20px 20px 50px',
+          margin: '70px auto 30px',
+          overflow: 'hidden',
+        }}
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+        spaceBetween={100}
+        slidesPerView={1}
+        loop={true}
+        navigation
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        centeredSlides={true}
+        pagination={{ clickable: true }}
+        breakpoints={breakpoints}
+      >
+        {sponsorList.map((sponsor, index) => (
+          <SwiperSlide key={index} className={styles.sponsor}>
             <Image
-              src={college.logo}
-              alt={`${college.name} logo`}
+              src={sponsor.logo}
+              alt={`${sponsor.name} logo`}
               width={100}
               height={100}
             />
-            <p>{college.name}</p>
-          </div>
+            <p>{sponsor.name}</p>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
+
       <div>
         And Many More...
       </div>
