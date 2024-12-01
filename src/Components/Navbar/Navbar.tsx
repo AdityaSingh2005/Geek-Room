@@ -118,7 +118,7 @@ export default function Navbar() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <nav className="relative w-full px-4 py-6 bg-white">
+    <nav className="w-full h-28 px-4 py-6 bg-white fixed z-20">
       <div 
         className="max-w-4xl mx-auto"
         onMouseEnter={() => setIsHovered(true)}
