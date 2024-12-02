@@ -98,6 +98,7 @@
 // };
 
 // export default Navbar;
+
 'use client';
 
 import Image from 'next/image';
@@ -105,85 +106,108 @@ import Link from 'next/link';
 import img1 from './gr_left_bracket.svg';
 import slash from './gr_slash.svg';
 import img2 from './gr_right_bracket.svg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import styles from '../../styles/navbar2.module.scss';
 
 const navItems = [
-  { title: 'Home', href: '/', active: true },
-  { title: 'About', href: '#about-us', active: false },
-  { title: 'Events', href: '/events', active: false },
-  { title: 'Contact', href: '#contact-us', active: false },
+  { title: 'Home', href: '/' },
+  { title: 'About', href: '#about-us' },
+  { title: 'Events', href: '/events' },
+  { title: 'Contact', href: '#contact-us' },
 ];
 
 export default function Navbar() {
   const [isHovered, setIsHovered] = useState(false);
+  const [activeNavItem, setActiveNavItem] = useState<string>('Home');
+  const router = useRouter();
+
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+
+    if (currentPath === '/') {
+      setActiveNavItem('Home');
+    } else if (currentPath === '/events') {
+      setActiveNavItem('Events');
+    }
+  }, []);
+
+  const handleNavigation = (title: string, href: string) => {
+    if (href.startsWith('#')) {
+      router.push('/');
+      setTimeout(() => {
+        document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      router.push(href);
+    }
+    setActiveNavItem(title);
+  };
 
   return (
-    <nav className="w-full h-28 px-4 py-6 bg-white fixed z-20">
-      <div 
-        className="max-w-4xl mx-auto"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+    <nav
+      className={styles['nav-container']}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div
+        className={`${styles['nav-logo-container']} ${
+          isHovered ? styles['hovered'] : ''
+        }`}
       >
-        {/* Logo Container */}
-        <div className="flex justify-center items-center h-24 relative">
-          {/* Left Bracket */}
-          <Image 
-            src={img1}
-            alt="Left bracket"
-            width={96}
-            height={96}
-            className={`h-24 w-auto mr-[-70px] transition-transform duration-500 ease-in-out
-              ${isHovered ? 'translate-x-[-45vw]' : 'translate-x-0'}`}
-          />
-          
-          {/* Left Dot */}
-          <div className={`absolute left-[50%] ml-[-20px] mt-[-6px] bg-black h-2.5 w-2.5 rounded-full
-            transition-opacity duration-500 ease-in-out
-            ${isHovered ? 'opacity-0' : 'opacity-100'}`}
-          />
-
-          {/* Slash */}
-          <Image
-            src={slash}
-            alt="Slash"
-            width={96}
-            height={96}
-            className="h-24 w-auto z-10"
-          />
-
-          {/* Right Dot */}
-          <div className={`absolute left-[50%] ml-[8px] mt-[-6px] bg-black h-2.5 w-2.5 rounded-full
-            transition-opacity duration-500 ease-in-out
-            ${isHovered ? 'opacity-0' : 'opacity-100'}`}
-          />
-
-          {/* Right Bracket */}
-          <Image
-            src={img2}
-            alt="Right bracket"
-            width={96}
-            height={96}
-            className={`h-24 w-auto ml-[-70px] transition-transform duration-500 ease-in-out
-              ${isHovered ? 'translate-x-[45vw]' : 'translate-x-0'}`}
-          />
-        </div>
-
-        {/* Navigation Items */}
-        <div className={`absolute top-14 left-0 w-full
-          transition-all duration-500 ease-in-out
-          ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
-          <div className="flex justify-center gap-16 max-w-4xl mx-auto">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`py-1 px-6 rounded-2xl text-lg text-black transition-colors duration-300
-                  ${item.active ? 'bg-[#F15A22] text-white' : 'hover:bg-gray-100'}`}
-              >
-                {item.title}
-              </Link>
-            ))}
-          </div>
+        <Image
+          src={img1}
+          alt="Left bracket"
+          width={96}
+          height={96}
+          className={`${styles['nav-logo-bracket-left']} ${
+            isHovered ? styles['hovered-left'] : ''
+          }`}
+        />
+        <div
+          className={`${styles['nav-logo-dot']} ${styles['dot-left']} ${
+            isHovered ? styles['hidden'] : styles['visible']
+          }`}
+        />
+        <Image
+          src={slash}
+          alt="Slash"
+          width={96}
+          height={96}
+          className={styles['nav-logo-slash']}
+        />
+        <div
+          className={`${styles['nav-logo-dot']} ${styles['dot-right']} ${
+            isHovered ? styles['hidden'] : styles['visible']
+          }`}
+        />
+        <Image
+          src={img2}
+          alt="Right bracket"
+          width={96}
+          height={96}
+          className={`${styles['nav-logo-bracket-right']} ${
+            isHovered ? styles['hovered-right'] : ''
+          }`}
+        />
+      </div>
+      <div
+        className={`${styles['nav-items']} ${
+          isHovered ? styles['visible'] : styles['hidden']
+        }`}
+      >
+        <div className={styles['nav-items-list']}>
+          {navItems.map((item) => (
+            <span
+              key={item.href}
+              className={`${styles['nav-items-list-link']} ${
+                activeNavItem === item.title ? styles['active'] : ''
+              }`}
+              onClick={() => handleNavigation(item.title, item.href)}
+            >
+              {item.title}
+            </span>
+          ))}
         </div>
       </div>
     </nav>
