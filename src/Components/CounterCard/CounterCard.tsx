@@ -83,9 +83,9 @@ interface ContainerProps {
 
 const CounterCardContainer: React.FC<ContainerProps> = ({ hackathonDetails = [] }) => {
   const defaultCounters: CounterProps[] = [
-    { finalNumber: 25000, label: "Active Members" },
-    { finalNumber: 20, label: "Events Organized" },
-    { finalNumber: 400, label: "Team Members" }
+    { finalNumber: 100000, label: "Active Members" },
+    { finalNumber: 100, label: "Events Organized" },
+    { finalNumber: 50000, label: "Event Participants" }
   ];
 
   const counters = hackathonDetails.length > 0 
