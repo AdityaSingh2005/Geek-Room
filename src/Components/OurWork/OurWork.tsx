@@ -41,10 +41,10 @@ const OurWork: React.FC = () => {
     };
   }, []);
   const workAreas: WorkBoxProps[] = [
-    { title: 'Quality', icon: '/Images/rect4.png', icon2:'/Images/Star.png' },
-    { title: 'Mentors', icon: '/Images/rect2.png', icon2:'/Images/People.png'  },
-    { title: 'Develop', icon: '/Images/rect3.png', icon2:'/Images/Comp.png' },
-    { title: 'Product', icon: '/Images/rect1.png', icon2:'/Images/Frame.png' },
+    { title: 'Hackathons', icon: '/Images/rect4.png', icon2:'/Images/Star.png' },
+    { title: 'Networking Events', icon: '/Images/rect2.png', icon2:'/Images/People.png'  },
+    { title: 'Workshops', icon: '/Images/rect3.png', icon2:'/Images/Comp.png' },
+    { title: 'Hiring Events', icon: '/Images/rect1.png', icon2:'/Images/Frame.png' },
   ];
 
   return (

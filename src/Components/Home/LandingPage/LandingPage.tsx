@@ -36,7 +36,7 @@ const LandingPage = () => {
           <Image src={Geek2} alt="GeekRoomLogo" />
         </div>
         <div className={styles.word}><h1>Geek Room</h1></div>
-        <div className={styles.word}><p>A community dedicated to helping each other get better at coding together.</p></div>
+        <div className={styles.word}><p>Bridging companies and developers through hackathons, events, and hiring competitions.</p></div>
 
       </div>
       <div className={styles.ball1} ref={ballRef1}></div>

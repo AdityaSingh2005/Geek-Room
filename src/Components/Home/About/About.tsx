@@ -12,7 +12,7 @@ const About = () => {
           <h1>ABOUT US{/*What is <span style={{color: '#00ACB4'}}>Geek Room?</span>*/}</h1>
       <div className={styles.aboutContent}>
         <div className={styles.aboutContentText}>
-          <p>Geek Room is a widespread coding community with over 100000+ active coders nationwide. It was started by three coding enthusiasts with the main objective to create a transparent community where sharing of ideas and helping other people is the main goal . Geek Room boasts of various hackathon winning teams, 6 independent institutes with Geek Room chapters and so much more.</p>
+          <p>Geek Room is a nationwide developer community with 100,000+ active coders, focused on building innovation through hackathons, events, and industry collaboration. With multiple institute chapters and hackathon-winning teams, Geek Room connects companies with India’s rapidly growing developer ecosystem.</p>
           {/*<p>Our vast connections, a widespread community of over 25000+ coders nationwide, conduction of successful hackathons and events , boasting multi hackathon winning teams comprised purely of Geek Room members, a philosophy of a community of the coders, for the coders and by the coders and a transparent community where anyone can start coding easily, Geek Room is a unique trendsetter that is built for the upliftment of the Indian coding community</p>*/}
         </div>
       </div>

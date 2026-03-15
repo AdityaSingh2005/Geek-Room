@@ -51,7 +51,7 @@ const FAQs = () => {
     {
       question: "What is Geek Room?",
       answer:
-        "Geek Room is a widespread coding community with over 100000+ active coders nationwide. It was started by three 1st year coding enthusiasts with the main objective to create a transparent community where sharing of ideas and helping other people is the main goal . Geek Room boasts of various hackathon winning teams , 6 independent institutes with Geek Room chapters and so much more.",
+        "Geek Room is a nationwide developer community with 100,000+ active coders, focused on building innovation through hackathons, events, and industry collaboration. With multiple institute chapters and hackathon-winning teams, Geek Room connects companies with India’s rapidly growing developer ecosystem.",
     },
     {
       question: "How to become Community Partner for Geek Room events",
