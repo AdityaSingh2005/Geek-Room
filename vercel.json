@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "https://empathetic-increase-234668.framer.app/:path*"
+    }
+  ]
+}
